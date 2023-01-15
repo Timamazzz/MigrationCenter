@@ -1,7 +1,6 @@
 #!/bin/bash
 
 cd [PATH/TO/PARENT/DIRECTORY];
-source venv/bin/activate;
-cd MigrationCenter;
-python manage.py test;
+source venv/scripts/activate;
+python manage.py runserver;
 gulp;
