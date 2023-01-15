@@ -1,0 +1,94 @@
+.header{
+    padding: 30px;
+}
+
+.headerContainer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1180px;
+    margin: 0 auto;
+}
+
+.logoIcon{
+    width: 100%;
+}
+
+.headerTitle{
+    width: 585px;
+    color: #AD001E;
+    font-family: 'Ruda', sans-serif;
+    font-weight: bold;
+    
+}
+
+.userProfileContainer{
+    display: flex;
+    width: 260px;
+    align-items: flex-end;
+    flex-direction: column;
+
+    .lng{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        font-family: 'Ruda';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 8px;
+        line-height: 10px;
+        color: #5B065A;
+        text-decoration: none;
+
+        img{
+            margin-right: 5px;
+        }
+    }
+
+    .userInfo{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        background: #FAEDFF;
+        border: 1px solid #A10A27;
+        border-radius: 27px 0 0 27px;
+        height: 29px;
+        padding-right: 15px;
+        margin: 15px 0 15px 0;
+
+        .userName{
+            font-family: 'Roboto';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 19px;
+            /* identical to box height */
+
+
+            color: #000000;
+        }
+    }
+
+    .navLoggin{
+        a{
+            text-decoration: none;
+            
+            font-family: 'Ruda';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 10px;
+            line-height: 12px;
+
+            color: #00A3FF;
+            margin-left: 13px;
+
+            :first-child{
+                margin-left: 0;
+            }
+            :hover{
+                color: #ca00af;
+            }
+        }
+    }
+}
