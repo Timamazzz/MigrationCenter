@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="ru">
     <head>
+        {% load  static %}
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <title>gulp-scss-starter</title>
@@ -10,7 +11,7 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Ruda:wght@400;700&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="styles/main.css">
+        <link rel="stylesheet" href="{% static "/styles/main.css" %}">
     </head>
     <body>
         <header class="header">
