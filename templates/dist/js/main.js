@@ -7,7 +7,16 @@
   \*********************************************/
 /***/ (() => {
 
-
+$(".navListCont").on({
+  mouseenter: function mouseenter() {
+    $('.whiteBack').addClass("active");
+    $('.navList').addClass("active");
+  },
+  mouseleave: function mouseleave() {
+    $('.whiteBack').removeClass("active");
+    $('.navList').removeClass("active");
+  }
+});
 
 /***/ }),
 

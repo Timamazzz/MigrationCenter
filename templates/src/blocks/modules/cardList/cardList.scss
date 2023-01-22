@@ -1,0 +1,111 @@
+.newsTitle{
+    font-family: 'Ruda';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 29px;
+    text-transform: uppercase;
+
+    color: #AD001E;
+    margin-top: 90px;
+}
+
+.cardList{
+    display: grid;
+    grid-template-columns: 240px 240px 240px 240px;
+    grid-gap: 20px;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 45px;
+    margin-top: 30px;
+}
+
+.cardItem{
+    width: 100%;
+    height: 330px;
+    border: 0.8px solid #FFC7D0;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+
+    .cardTitle{
+        font-family: 'Ruda';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 19px;
+        text-transform: uppercase;
+        color: #AD001E;
+        margin-bottom: 25px;
+        padding-left: 20px;
+    }
+
+    .cardText{
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 300;
+        font-size: 12px;
+        line-height: 16px;
+        color: #000000;
+        padding: 0 20px;
+        margin: 0;
+    }
+
+    .cardLink{
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 300;
+        font-size: 12px;
+        color: #00d9ff;
+        text-decoration: none;
+    }
+
+    &:last-child{
+        margin-right: 0;
+    }
+}
+
+.btn{
+    background: #AD001E;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 10px 20px;
+    color: #fff;
+    text-align: center;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+    border: 2px solid #FFFFFF;
+    position: relative;
+    overflow: hidden;
+    object-fit: cover;
+    transition: .3s linear;
+
+    img{
+        margin-left: 10px;
+    }
+
+    &::before{
+        content: '';
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        background-color: #fff;
+        opacity: .3;
+        transform: rotate(-50deg);
+        z-index: 1;
+    }
+
+    &:hover{
+        background: linear-gradient(90deg, #EA1C29 0%, #9A40BC 49.48%, #0088CE 100%);
+
+        &::before{
+            left: 100%;
+        }
+    }
+}

@@ -389,6 +389,55 @@ ul {
   padding: 0;
 }
 
+.bg__preloader {
+  background-color: #fff;
+  content: "";
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000000000;
+  background-color: #fff;
+}
+
+#preloader {
+  content: "";
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000000000;
+  background-color: #fff;
+}
+
+.pre_wrapper {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.pre_wrapper img {
+  animation: logoScale 1.5s linear infinite;
+}
+
+@keyframes logoScale {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.2);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
 .header {
   padding: 30px;
 }
@@ -481,6 +530,8 @@ ul {
 .nav {
   width: 100%;
   background: linear-gradient(90deg, #EA1C29 0%, #9A40BC 49.48%, #0088CE 100%);
+  z-index: 100;
+  position: absolute;
 }
 
 .container {
@@ -521,9 +572,55 @@ ul {
   border-right: 2px solid #FFFFFF;
 }
 
+.whiteBack {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 10;
+  content: "";
+  background-color: #FFFFFF;
+  opacity: 0;
+  pointer-events: none;
+  transition: 0.3s linear;
+}
+
+.whiteBack.active {
+  opacity: 0.7;
+  pointer-events: all;
+}
+
+.navListCont {
+  position: relative;
+}
+
+.navList {
+  position: absolute;
+  top: 50px;
+  left: 0;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.navList.active {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.navList .navItem {
+  background-color: #FAEDFF;
+  color: #AD001E;
+  border: 2px solid #FFFFFF;
+}
+
+.navList .navItem:hover {
+  border: 2px solid #AD001E;
+}
+
 .search {
   width: 100%;
-  margin-top: 30px;
+  margin-top: 100px;
 }
 
 .searchContainer .formSrch {
@@ -565,5 +662,200 @@ ul {
 
 .searchContainer .srchText:hover {
   color: #5B065A;
+}
+
+.newsTitle {
+  font-family: "Ruda";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 29px;
+  text-transform: uppercase;
+  color: #AD001E;
+  margin-top: 90px;
+}
+
+.cardList {
+  display: grid;
+  grid-template-columns: 240px 240px 240px 240px;
+  grid-gap: 20px;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 45px;
+  margin-top: 30px;
+}
+
+.cardItem {
+  width: 100%;
+  height: 330px;
+  border: 0.8px solid #FFC7D0;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.cardItem .cardTitle {
+  font-family: "Ruda";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+  text-transform: uppercase;
+  color: #AD001E;
+  margin-bottom: 25px;
+  padding-left: 20px;
+}
+
+.cardItem .cardText {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 300;
+  font-size: 12px;
+  line-height: 16px;
+  color: #000000;
+  padding: 0 20px;
+  margin: 0;
+}
+
+.cardItem .cardLink {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 300;
+  font-size: 12px;
+  color: #00d9ff;
+  text-decoration: none;
+}
+
+.cardItem:last-child {
+  margin-right: 0;
+}
+
+.btn {
+  background: #AD001E;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 10px 20px;
+  color: #fff;
+  text-align: center;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 150px;
+  border: 2px solid #FFFFFF;
+  position: relative;
+  overflow: hidden;
+  object-fit: cover;
+  transition: 0.3s linear;
+}
+
+.btn img {
+  margin-left: 10px;
+}
+
+.btn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  opacity: 0.3;
+  transform: rotate(-50deg);
+  z-index: 1;
+}
+
+.btn:hover {
+  background: linear-gradient(90deg, #EA1C29 0%, #9A40BC 49.48%, #0088CE 100%);
+}
+
+.btn:hover::before {
+  left: 100%;
+}
+
+.cardTitle {
+  font-family: "Ruda";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+  color: #AD001E;
+  margin-top: 30px;
+}
+
+.historyContent {
+  max-height: 1300px;
+  overflow-y: scroll;
+}
+
+.hystoryText {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 300;
+  font-size: 12px;
+  line-height: 16px;
+  text-align: justify;
+  text-indent: 50px;
+  color: #000000;
+}
+
+.footer {
+  background: #FAEDFF;
+  margin-top: 150px;
+  padding-top: 30px;
+}
+
+.footer .logo {
+  width: 100px;
+}
+
+.footerContainer {
+  display: flex;
+  justify-content: space-between;
+}
+
+.navFooter {
+  display: grid;
+  grid-template-columns: repeat(4, 150px);
+  align-items: center;
+  justify-items: start;
+  column-gap: 50px;
+}
+
+.navFooter .footerLinkItem {
+  font-family: "Ruda";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 22px;
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #AD001E;
+}
+
+.footerGradient {
+  background: linear-gradient(90deg, #EA1C29 0%, #9A40BC 49.48%, #0088CE 100%);
+  padding: 25px 0;
+  margin-top: 30px;
+}
+
+.lineFooter {
+  display: flex;
+  justify-content: space-between;
+}
+
+.lineFooter a {
+  font-family: "Ruda";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 15px;
+  text-decoration: none;
+  text-align: center;
+  text-transform: uppercase;
+  color: #FFFFFF;
 }
 /*# sourceMappingURL=maps/main.css.map */
