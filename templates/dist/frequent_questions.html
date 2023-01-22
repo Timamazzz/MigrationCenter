@@ -87,62 +87,21 @@
         </div>
     </div>
 </nav>
-        <section class="search">
-    <div class="container">
-        <div class="searchContainer">
-            <form class="formSrch">
-                <div class="containerSrc">
-                    <input class="srch">
-                    <a href="#"><img src="{% static "/img/search.svg" %}"></a>
-                </div>
-                <a href="{% url 'questions' %}" class="srchText">частые вопросы</a>
-            </form>
-            
-        </div>
-    </div>
-</section>
-        <section class="slider">
-    <div class="container">
-        <div class="searchContainer">
-            <div class="sliderContent">
-                <div>your content</div>
-                <div>your content</div>
-                <div>your content</div>
-            </div>
-            
-        </div>
-    </div>
-</section>
+        
         <section class="section">
     <div class="container">
-        <h2 class="newsTitle">новости</h2>
-        <div class="cardList">
-            {% for new in news %}
-                <div class="cardItem">
-                <h3 class="cardTitle">{{ new.header }}</h3>
-                <p class="cardText">{{ new.text }}</p>
+        <h1 class="newsTitle">Частые вопросы</h1>
+            <div class="historyContent">
+                {% for question in questions %}
+                    <div class="historyItem">
+                        <h3 class="cardTitle">{{ question.header }}</h3>
+                        <p class="hystoryText">{{ question.text }}</p>
+                    </div>
+                {% endfor %}
             </div>
-            {% endfor %}
-        </div>
-
-        <a href="#" class="btn">все новости <img src="{% static "/img/arrow.svg" %}"></a>
     </div>
 </section>
-        <section class="section">
-    <div class="container">
-        <h2 class="newsTitle">информация</h2>
-        <div class="cardList">
-            {% for info in informations %}
-                <div class="cardItem">
-                <h3 class="cardTitle">{{ info.header }}</h3>
-                <p class="cardText">{{ info.text }}</p>
-            </div>
-            {% endfor %}
-        </div>
 
-        <a href="#" class="btn">вся информация<img src="{% static "/img/arrow.svg" %}"></a>
-    </div>
-</section>
         <footer class="footer">
     <div class="container">
       <div class="footerContainer">

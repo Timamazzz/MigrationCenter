@@ -10,5 +10,10 @@ def index(request):
     return render(request, 'dist/index.html', {'news': news, 'informations': informations})
 
 
+def frequent_questions(request):
+    questions = FrequentQuestions.objects.all()
+    return render(request, 'dist/frequent_questions.html', {'questions': questions})
+
+
 def redirect_from_root(request):
     return redirect(to='/main/')
