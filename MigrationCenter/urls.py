@@ -20,5 +20,6 @@ from main import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('main/', include('main.urls')),
+    path('about/', include('about.urls')),
     path('', views.redirect_from_root, name='redirect from root')
 ]

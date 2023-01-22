@@ -7,7 +7,7 @@ from main.models import *
 def index(request):
     news = News.objects.all()
     informations = Information.objects.all()
-    return render(request, 'dist/index.html', {'news': news, 'informations':informations})
+    return render(request, 'dist/index.html', {'news': news, 'informations': informations})
 
 
 def redirect_from_root(request):
