@@ -1,0 +1,99 @@
+.containerVak{
+    margin-top: 65px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.contVakItem{
+    margin-bottom: 70px;
+}
+
+.vaktitle{
+    font-family: 'Ruda';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    margin-bottom: 20px;
+    color: #AD001E;
+
+}
+
+.vakInfo{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.imgVak{
+    width: 190px;
+    height: 275px;
+    object-fit: contain;
+    overflow: hidden;
+}
+
+.vakIngoText{
+    width: 245px;
+    margin-left: 25px;
+}
+
+.vakInfoTitle{
+    font-family: 'Ruda';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+    /* identical to box height */
+
+
+    color: #3A3A3A;
+}
+
+.vakInfoTextItem{
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 12px;
+    line-height: 16px;
+    text-align: justify;
+
+    color: #000000;
+}
+
+.vakInfoPrice{
+    font-family: 'Ruda';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+    /* identical to box height */
+
+
+    color: #AD001E;
+}
+
+.vakInphoPhone{
+    font-family: 'Ruda';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+
+    color: #AD001E;
+
+    .link{
+        margin-left: 20px;
+    }
+}
+
+.link{
+    font-family: 'Ruda';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+    text-decoration: none;
+    color: #4483C2;
+}

@@ -1,0 +1,85 @@
+.insurHeader{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 25px;
+}
+
+.insuranceTitle{
+    font-family: 'Ruda';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    text-align: center;
+
+    color: #AD001E;
+
+}
+
+.insuranceBoldText{
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: bold;
+    font-size: 13px;
+    line-height: 16px;
+    /* or 123% */
+
+    text-align: justify;
+    text-indent: 50px;
+
+    color: #000000;
+}
+
+.insuItem{
+    display: flex;
+    margin-top: 45px;
+}
+
+.insuItemTitle{
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 16px;
+    /* identical to box height, or 133% */
+
+    text-align: justify;
+
+    color: #AD001E;
+    margin-right: 40px;
+    width: 200px;
+}
+
+.insuItemText{
+    
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 12px;
+    line-height: 16px;
+    /* or 133% */
+
+    text-align: justify;
+
+    color: #3A3A3A;
+
+}
+
+.link{
+    color: #00A3FF;
+}
+
+.insuItemSubtext{
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 6px;
+    line-height: 10px;
+    /* or 167% */
+
+    text-align: justify;
+
+    color: #3A3A3A;
+
+}

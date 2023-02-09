@@ -10,11 +10,6 @@
 
 }
 
-.historyContent{
-    max-height: 1300px;
-    overflow-y: scroll;
-}
-
 .hystoryText{
     font-family: 'Roboto';
     font-style: normal;
@@ -25,4 +20,15 @@
     text-indent: 50px;
 
     color: #000000;
+}
+
+.historyItemImg{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.hystoryTextImg{
+    max-width: 670px;
 }

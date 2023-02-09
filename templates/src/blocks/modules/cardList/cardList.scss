@@ -11,18 +11,17 @@
 }
 
 .cardList{
-    display: grid;
-    grid-template-columns: 240px 240px 240px 240px;
-    grid-gap: 20px;
+    display: flex;
     flex-direction: row;
     justify-content: space-between;
+    flex-wrap: wrap;
     align-items: center;
     margin-bottom: 45px;
     margin-top: 30px;
 }
 
 .cardItem{
-    width: 100%;
+    width:240px;
     height: 330px;
     border: 0.8px solid #FFC7D0;
     display: flex;

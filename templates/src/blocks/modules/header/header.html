@@ -6,15 +6,35 @@
         <h1 class="headerTitle">Центр помощи, поддержки,<br/> 
             социальной и трудовой миграции</h1>
         <div class="userProfileContainer">
-            <a href="#" class="lng">
-                <img src="{% static "/img/ru.svg" %}">
+            <a href="#" class="lng langOpen">
+                <img src="{% static "/img/ru.png" %}">
                 русский
             </a>
+            
+            <div class="modalUserBg"></div>
             <div class="userInfo">
+              <div style="display: flex; justify-content: space-between; align-items: center; width: 100%;">
                 <img class="userIcon" src="{% static "/img/user.svg" %}">
                 <p class="userName">Иван Иванов</p>
                 <img src="{% static "/img/dots.svg" %}" class="dots">
+              </div>
+               
             </div>
+            <div class="userInfoModal">
+                <div style="display: flex; justify-content: space-between; align-items: flex-start;">
+                  <img class="userIcon" src="{% static "/img/user.svg" %}">
+                  
+                  <div style="margin-top: 10px; margin-left: 50px;">
+                    <p class="userNameModal">Иван Иванов</p>
+                    <div>
+                        <p class="userNameModal">Тест тест</p>
+                        <p class="userNameModal">Тест тест</p>
+                        <p class="userNameModal">Тест тест</p>
+                    </div>
+                  </div>
+                </div>
+                 
+              </div>
             <div class="navLoggin">
                 <a href="#">регистрация</a>
                 <a href="#">вход</a>
@@ -24,5 +44,45 @@
         </div>
     </div>
 </header>
+
+
+<div class="modalLAng">
+    <div class="modalDocsBg"></div>
+    <div class="modalLang_content">
+        <div class="modalHeaderDocs">
+            <h4 class="modalLang_text">Выберите язык</h4>
+            <div class="docsClose langClose"></div>
+        </div>
+        <div class="langMenu">
+            <div class="langItem">
+                
+                <input type="checkbox" id="cb1"/>
+                <img class="imgLang" src="{% static "/img/ru.png" %}"/>
+                <label class="langText">русский</label>
+            </div>
+            <div class="langItem">
+                <div>
+                    <input type="checkbox" id="cb2"/>
+                </div>
+                <img class="imgLang" src="{% static "/img/eng.png" %}"/>
+                <label class="langText">английский</label>
+            </div>
+            <div class="langItem">
+                <div>
+                    <input type="checkbox" id="cb3"/>
+                </div>
+                <img class="imgLang" src="{% static "/img/uzb.png" %}"/>
+                <label class="langText">узбекский</label>
+            </div>
+            <div class="langItem">
+                <div>
+                    <input type="checkbox" id="cb4"/>
+                </div>
+                <img class="imgLang" src="{% static "/img/tad.png" %}"/>
+                <label class="langText">таджикский</label>
+            </div>
+        </div>
+    </div>
+</div>
 
 <div class="whiteBack"></div>

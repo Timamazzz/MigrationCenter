@@ -2,3 +2,32 @@ h1, h2, h3, h4, h5, h6, ul {
     margin: 0;
     padding: 0;
 }
+
+a {
+    text-decoration: none;
+}
+p {
+    margin-block-start: 0;
+    margin-block-end: 0;
+}
+
+/* W3C standard
+   сейчас только для Firefox */
+   * {
+    scrollbar-width: thin;
+    scrollbar-color: blue orange;
+
+  }
+  
+  /* для Chrome/Edge/Safari */
+  *::-webkit-scrollbar {
+    height: 10px;
+    width: 12px;
+  }
+  *::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  *::-webkit-scrollbar-thumb {
+    background-color:#9641BC;
+    border-radius: 5px;
+  }

@@ -1,0 +1,142 @@
+.conatainerContact{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 45px;
+}
+
+.contactInfo{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-direction: column;
+}
+
+.contactInfoItem{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 22px;
+
+    &:last-child{
+        margin-bottom: 0;
+    }
+}
+
+.contactInfoCont{
+    margin-left: 90px;
+}
+
+.contactInfoText{
+    font-family: 'Ruda';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 32px;
+
+    color: #000000;
+}
+
+.phoneContact{
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 32px;
+    color: #000000; 
+    transition: .3s linear;
+    
+    &:hover{
+        color: #4483C2;
+    }
+}
+
+.mailContact{
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 32px;
+    display: flex;
+    align-items: flex-end;
+    transition: .3s linear;
+    color: #4483C2;
+
+    &:hover{
+        color: #af329a;
+    }
+}
+
+.containerManagers{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 45px;
+}
+
+.managersItem{
+    margin-bottom: 45px;
+}
+
+.managersTitle{
+    font-family: 'Ruda';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+
+    color: #AD001E;
+}
+
+.photoManager{
+    width: 210px;
+    height: 281px;
+    object-fit: cover;
+    margin: 20px 0;
+}
+
+.managersName{
+    
+    font-family: 'Ruda';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+
+    color: #3A3A3A;
+
+}
+
+.managerContact{
+    display: flex;
+    flex-direction: column;
+}
+
+.managerPhone{
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 12px;
+    line-height: 16px;
+    color: #000000;
+    transition: .3s linear;
+
+    &:hover{
+       color: #af329a;
+    }
+}
+
+.managerMail{
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 12px;
+    line-height: 16px;
+    color: #000000;
+    transition: .3s linear;
+
+    &:hover{
+       color: #af329a;
+    }
+}
