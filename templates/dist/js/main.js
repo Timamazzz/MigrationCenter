@@ -75,6 +75,64 @@ $(".navListCont").on({
     $('.navList').removeClass("active");
   }
 });
+$(document).ready(function () {
+  $('.slider__intro').slick({
+    arrows: true,
+    nextArrow: '<div class="arrow__slider right"><i class="fas fa-chevron-right"></i></div>',
+    prevArrow: '<div class="arrow__slider left"><i class="fas fa-chevron-left"></i></div>',
+    autoplay: true,
+    slickPlay: false,
+    responsive: [{
+      breakpoint: 1624,
+      settings: {
+        draggable: true,
+        slidesToShow: 1,
+        slidesToScroll: 1
+      }
+    }, {
+      breakpoint: 1324,
+      settings: {
+        draggable: true,
+        slidesToShow: 1,
+        slidesToScroll: 1
+      }
+    }, {
+      breakpoint: 480,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1
+      }
+    }]
+  });
+  $('.slider__introNews').slick({
+    arrows: true,
+    nextArrow: '<div class="arrow__slider right"><i class="fas fa-chevron-right"></i></div>',
+    prevArrow: '<div class="arrow__slider left"><i class="fas fa-chevron-left"></i></div>',
+    autoplay: true,
+    slickPlay: false,
+    responsive: [{
+      breakpoint: 1624,
+      settings: {
+        draggable: true,
+        slidesToShow: 3,
+        slidesToScroll: 1
+      }
+    }, {
+      breakpoint: 1324,
+      settings: {
+        draggable: true,
+        slidesToShow: 3,
+        slidesToScroll: 1
+      }
+    }, {
+      breakpoint: 480,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1
+      }
+    }]
+  });
+});
 
 /***/ }),
 

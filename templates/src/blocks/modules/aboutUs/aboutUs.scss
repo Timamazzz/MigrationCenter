@@ -1,0 +1,56 @@
+.aboutUscontainer{
+    margin-top: 45px;
+}
+
+.imgAboutContainer{
+    display: flex;
+    justify-content: space-between;
+}
+
+.imgAboutContainer .news__img{
+    margin-right: 25px;
+}
+
+.aboutUscontainer .textNews{
+    margin-top: 0;
+}
+.aboutUscontainer .insuranceTitle{
+    text-align: left;
+    margin-top: 45px;
+    margin-bottom: 25px;
+}
+
+.activityContainer{
+    display: flex;
+    align-items: center;
+    margin-top: 55px;
+}
+
+.activityItem{
+    width: 200px;
+    height: 200px;
+    border: 0.8px solid #FFC7D0;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    padding-bottom: 25px;
+    margin-right: 55px;
+}
+
+.activity__img{
+    position: absolute;
+    z-index: 100;
+    top: 0;
+    width: 220px;
+    object-fit: contain;
+}
+
+.activityTitle{
+    font-family: 'Ruda';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 15px;
+    color: #AD001E;
+}

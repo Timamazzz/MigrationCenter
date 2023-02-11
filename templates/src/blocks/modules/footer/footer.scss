@@ -15,10 +15,10 @@
 
 .navFooter{
     display: grid;
-    grid-template-columns: repeat(4, 150px);
+    grid-template-columns: repeat(3, 150px);
     align-items: center;
     justify-items: start;
-    column-gap: 50px;
+    column-gap: 20px;
 
     .footerLinkItem{
         font-family: 'Ruda';
@@ -31,6 +31,19 @@
         text-decoration: none;
         color: #AD001E;
     }
+}
+
+.textFooter{
+    font-family: 'Ruda';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 8px;
+    line-height: 16px;
+    /* or 200% */
+    margin-top: 20px;
+    text-align: right;
+    width: 260px;
+    color: #AD001E;
 }
 
 .footerGradient{
