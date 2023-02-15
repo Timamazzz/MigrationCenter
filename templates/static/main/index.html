@@ -1,0 +1,44 @@
+{% extends '../base.html' %}
+{% load static %}
+{% block content %}
+<section class="section__intro">
+    <div class="slider__intro">
+        <div class="intro__item">
+            <img loading="lazy" class="intro__img" src="{% static "/img/sliderImg.png" %}">
+            <div class="intro__item-container">
+                <!--<h2 class="intro__text">Title</h2>
+                <h2 class="intro__title">subTitle</h2>-->
+            </div>
+            <a href="#" class="btn">Перейти <img src="{% static "/img/arrow.svg" %}" alt=""></a>
+        </div>
+
+        <div class="intro__item">
+            <img loading="lazy" class="intro__img" src="{% static "/img/sliderImg.png" %}">
+            <div class="intro__item-container">
+              <!--<h2 class="intro__text">Title</h2>
+                <h2 class="intro__title">subTitle</h2>-->
+            </div>
+            <a href="#" class="btn">Перейти <img src="{% static "/img/arrow.svg" %}" alt=""></a>
+        </div>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container">
+        <h1 class="newsTitle">Новости</h1>
+        <div class="containerNews">
+            {% for new in news %}
+                <a href="#" class="linkNewNews">
+                    <div class="newNewsItem">
+                        <p class="newsDate">{{ new.date }}</p>
+                        <div class="nontentNews">
+                            <img src="{% static "/img/newsImg.png" %}" class="newsImg">
+                            <h3 class="newsText">{{ new.header }}</h3>
+                        </div>
+                   </div>
+                </a>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+{% endblock %}

@@ -10,3 +10,9 @@ class Information(models.Model):
 class FrequentQuestions(models.Model):
     header = models.CharField(max_length=256)
     text = models.TextField()
+
+
+class BannerInfo(models.Model):
+    header = models.CharField(max_length=256)
+    text = models.TextField()
+    image = models.ImageField()

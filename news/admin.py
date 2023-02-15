@@ -3,4 +3,6 @@ from .models import *
 
 # Register your models here.
 admin.site.register(News)
+admin.site.register(NewsImage)
+admin.site.register(SliderImage)
 
