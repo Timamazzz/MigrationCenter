@@ -10,6 +10,12 @@ def index(request):
     return render(request, 'static/main/index.html', {'news': news, 'informations': informations})
 
 
+def old_index(request):
+    news = News.objects.filter().order_by('-date')[:3]
+    informations = Information.objects.all()
+    return render(request, 'dist/index.html')
+
+
 def frequent_questions(request):
     questions = FrequentQuestions.objects.all()
     return render(request, 'static/main/frequent_questions.html', {'questions': questions})

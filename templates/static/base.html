@@ -143,20 +143,20 @@
     <nav class="nav">
         <div class="container">
             <div class="navContainer">
-                <a href="#" class="navItem">Главная</a>
+                <a href="{% url 'main' %}" class="navItem">Главная</a>
                 <div class="navListCont">
-                    <a href="#" class="navItem">О нас</a>
+                    <a href="{% url 'us' %}" class="navItem">О нас</a>
                     <div class="navList">
                         <a href="#" class="navItem">История</a>
-                        <a href="#" class="navItem">Направления деятельности</a>
-                        <a href="#" class="navItem">Документы</a>
-                        <a href="#" class="navItem">вакансии</a>
+                        <a href="{% url 'area_of_activities' %}" class="navItem">Направления деятельности</a>
+                        <a href="{% url 'docs' %}" class="navItem">Документы</a>
+                        <a href="{% url 'vacancies' %}" class="navItem">вакансии</a>
                     </div>
                 </div>
-                <a href="#" class="navItem">НОВОСТИ</a>
-                <a href="#" class="navItem">услуги</a>
-                <a href="#" class="navItem">обратная связь</a>
-                <a href="#" class="navItem">контакты</a>
+                <a href="{% url 'news' %}" class="navItem">НОВОСТИ</a>
+                <a href="{% url 'services' %}" class="navItem">услуги</a>
+                <a href="{% url 'feedback' %}" class="navItem">обратная связь</a>
+                <a href="{% url 'contacts' %}" class="navItem">контакты</a>
             </div>
         </div>
     </nav>
