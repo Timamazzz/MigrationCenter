@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from .models import *
-
+from django import template
+register = template.Library()
 
 # Create your views here.
 def us(request):
@@ -23,3 +24,7 @@ def docs(request):
 def vacancies(request):
     vacancies = Vacancy.objects.filter(is_active=True)
     return render(request, 'static/about/vacancies.html', {'vacancies': vacancies})
+
+@register.filter 
+def get_item(Queryset):
+    return Queryset.id

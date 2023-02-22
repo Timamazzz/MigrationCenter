@@ -847,7 +847,7 @@ input[type=radio]:checked + label:after {
   width: 375px;
   margin: 100px auto;
   box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.2);
-  padding: 0 30px;
+  padding: 10px 30px;
   opacity: 0;
   transition: 0.3s linear;
 }
@@ -1135,12 +1135,41 @@ input[type=radio]:checked + label:after {
   align-items: center;
 }
 
+.intro__item-container{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.intro__text{
+  font-family: "Ruda";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 29px;
+  text-transform: uppercase;
+  color: white;
+}
+.intro__title{
+  font-family: "Ruda";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 29px;
+  text-transform: uppercase;
+  color: white;
+}
+
 .intro__item .btn {
   position: absolute;
   bottom: 50px;
   left: 50%;
   transform: translateX(-50%);
   margin: 0 auto;
+  font-family: "Ruda";
+  font-style: normal;
+  font-weight: 700;
 }
 
 .intro__img {
@@ -1332,7 +1361,7 @@ input[type=radio]:checked + label:after {
 .containerDocs {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  
   align-items: center;
   max-width: 1030px;
   flex-wrap: wrap;
@@ -1543,6 +1572,8 @@ input[type=radio]:checked + label:after {
   padding: 10px;
   border: 0.8px solid #FFC7D0;
   background-color: #fff;
+  height: 250px;
+  overflow: hidden;
 }
 
 .nontentNews .newsImg {
@@ -1626,6 +1657,7 @@ input[type=radio]:checked + label:after {
   justify-content: space-between;
   align-items: flex-start;
   margin-bottom: 22px;
+  width: 100%;
 }
 
 .contactInfoItem:last-child {
@@ -1944,6 +1976,8 @@ input[type=radio]:checked + label:after {
   font-size: 25px;
 }
 
+
+
 .slider__introNews .arrow__slider.left {
   left: 0px;
 }
@@ -2002,7 +2036,7 @@ input[type=radio]:checked + label:after {
 
 .activityItem {
   width: 200px;
-  height: 200px;
+  height: 250px;
   border: 0.8px solid #FFC7D0;
   position: relative;
   display: flex;
@@ -2017,6 +2051,7 @@ input[type=radio]:checked + label:after {
   z-index: 100;
   top: 0;
   width: 220px;
+  height: 200px;
   object-fit: contain;
 }
 
@@ -2027,6 +2062,21 @@ input[type=radio]:checked + label:after {
   font-size: 12px;
   line-height: 15px;
   color: #AD001E;
+  margin: 0 10px;
+  z-index: 10000;
+  overflow: hidden;
+}
+
+.docsItem{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 230px;
+  margin-right: 50px;
+}
+
+.docsItem:last-child{
+  margin-right: 0;
 }
 
 .containerErr {

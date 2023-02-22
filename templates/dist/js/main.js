@@ -7,7 +7,7 @@
   \*********************************************/
 /***/ (() => {
 
-if (document.referrer.indexOf(window.location.origin) != -1) {
+/*if (document.referrer.indexOf(window.location.origin) != -1) {
   $('.modalCoocke').addClass("active");
   $('.modalCoocke_content').addClass("active");
   $('html, body').css({
@@ -15,7 +15,7 @@ if (document.referrer.indexOf(window.location.origin) != -1) {
   });
 } else {
   console.log("from external site");
-}
+}*/
 $('.modalCoockee_btn').on('click', function () {
   $('.modalCoocke').removeClass("active");
   $('.modalCoocke_content').removeClass("active");

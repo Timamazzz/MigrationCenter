@@ -7,6 +7,7 @@
             «Центр помощи, поддержки, социальной и трудовой адаптации»</h1>
             <div class="containerDocs">
                 {% for doc in regular %}
+                {% include '../modal/modal.html' with doc=doc %}
                     <div class="docsItem docsOpen">
                         <h4 class="docsTitle">{{ doc.name }}</h4>
                         <div class="containerImgDocs">
@@ -16,6 +17,8 @@
                         </div>
                     </div>
                 {% endfor %}
+
+                <p>{{ regular|1|get_item }}</p>
             </div>
         <h1 class="newsTitle">Прочие ДОКУМЕНТЫ</h1>
             <div class="containerDocs">
