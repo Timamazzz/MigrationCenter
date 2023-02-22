@@ -15,4 +15,4 @@ class Manager(models.Model):
     surname = models.CharField(max_length=256)
     phone = models.CharField(max_length=20)
     email = models.EmailField(max_length=20)
-    image = models.ImageField()
+    image = models.ImageField(upload_to='images/managers/')

@@ -4,70 +4,19 @@
 <section class="section">
     <div class="container">
         <h1 class="newsTitle">Новости</h1>
-        <div class="containerNews">
-          <a href="{% url 'post' %}" class="linkNewNews">
-            <div class="newNewsItem">
-                <p class="newsDate">01.07.2022</p>
-                <div class="nontentNews">
-                    <img src="{% static "/img/newsImg.png" %}" class="newsImg">
-                    <h3 class="newsText">В Перми состоялась Первая Пермская Конференция по вопросам адаптации и интеграции трудовых мигрантов ....</h3>
-                </div>
-           </div>
-          </a>
-
-          <a href="{% url 'post' %}" class="linkNewNews">
-            <div class="newNewsItem">
-                <p class="newsDate">01.07.2022</p>
-                <div class="nontentNews">
-                    <img src="{% static "/img/newsImg.png" %}" class="newsImg">
-                    <h3 class="newsText">В Перми состоялась Первая Пермская Конференция по вопросам адаптации и интеграции трудовых мигрантов ....</h3>
-                </div>
-           </div>
-          </a>
-
-          <a href="{% url 'post' %}" class="linkNewNews">
-            <div class="newNewsItem">
-                <p class="newsDate">01.07.2022</p>
-                <div class="nontentNews">
-                    <img src="{% static "/img/newsImg.png" %}" class="newsImg">
-                    <h3 class="newsText">В Перми состоялась Первая Пермская Конференция по вопросам адаптации и интеграции трудовых мигрантов ....</h3>
-                </div>
-           </div>
-          </a>
-
-
-          <a href="{% url 'post' %}" class="linkNewNews">
-            <div class="newNewsItem">
-                <p class="newsDate">01.07.2022</p>
-                <div class="nontentNews">
-                    <img src="{% static "/img/newsImg.png" %}" class="newsImg">
-                    <h3 class="newsText">В Перми состоялась Первая Пермская Конференция по вопросам адаптации и интеграции трудовых мигрантов ....</h3>
-                </div>
-           </div>
-          </a>
-
-
-         <a href="{% url 'post' %}" class="linkNewNews">
-            <div class="newNewsItem">
-                <p class="newsDate">01.07.2022</p>
-                <div class="nontentNews">
-                    <img src="{% static "/img/newsImg.png" %}" class="newsImg">
-                    <h3 class="newsText">В Перми состоялась Первая Пермская Конференция по вопросам адаптации и интеграции трудовых мигрантов ....</h3>
-                </div>
-           </div>
-          </a>
-
-
-            <a href="{% url 'post' %}" class="linkNewNews">
-            <div class="newNewsItem">
-                <p class="newsDate">01.07.2022</p>
-                <div class="nontentNews">
-                    <img src="{% static "/img/newsImg.png" %}" class="newsImg">
-                    <h3 class="newsText">В Перми состоялась Первая Пермская Конференция по вопросам адаптации и интеграции трудовых мигрантов ....</h3>
-                </div>
-           </div>
-          </a>
-        </div>
+        {% for post in posts %}
+            <div class="containerNews">
+                <a href="{% url 'post' post.id %}" class="linkNewNews">
+                    <div class="newNewsItem">
+                        <p class="newsDate">{{ post.date }}</p>
+                        <div class="nontentNews">
+                            <img src="{{ post.previewImage.url }}" class="newsImg">
+                            <h3 class="newsText">{{ post.header }}</h3>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        {% endfor %}
     </div>
 </section>
 {% endblock %}

@@ -3,23 +3,16 @@
 {% block content %}
 <section class="section__intro">
     <div class="slider__intro">
-        <div class="intro__item">
-            <img loading="lazy" class="intro__img" src="{% static "/img/sliderImg.png" %}">
-            <div class="intro__item-container">
-                <!--<h2 class="intro__text">Title</h2>
-                <h2 class="intro__title">subTitle</h2>-->
+        {% for banner in banners %}
+            <div class="intro__item">
+                <img loading="lazy" class="intro__img" src="{{ banner.bannerImage.url }}">
+                <div class="intro__item-container">
+                    <h2 class="intro__text">{{ banner.bannerHeader }}</h2>
+                    <h2 class="intro__title">{{ banner.bannerText }}</h2>
+                </div>
+                <a href="{% url 'post' banner.id %}" class="btn">Перейти <img src="{% static "/img/arrow.svg" %}" alt=""></a>
             </div>
-            <a href="#" class="btn">Перейти <img src="{% static "/img/arrow.svg" %}" alt=""></a>
-        </div>
-
-        <div class="intro__item">
-            <img loading="lazy" class="intro__img" src="{% static "/img/sliderImg.png" %}">
-            <div class="intro__item-container">
-              <!--<h2 class="intro__text">Title</h2>
-                <h2 class="intro__title">subTitle</h2>-->
-            </div>
-            <a href="#" class="btn">Перейти <img src="{% static "/img/arrow.svg" %}" alt=""></a>
-        </div>
+        {% endfor %}
     </div>
 </section>
 
@@ -27,13 +20,13 @@
     <div class="container">
         <h1 class="newsTitle">Новости</h1>
         <div class="containerNews">
-            {% for new in news %}
-                <a href="#" class="linkNewNews">
+            {% for post in posts %}
+                <a href="{% url 'post' post.id %}" class="linkNewNews">
                     <div class="newNewsItem">
-                        <p class="newsDate">{{ new.date }}</p>
+                        <p class="newsDate">{{ post.date }}</p>
                         <div class="nontentNews">
-                            <img src="{% static "/img/newsImg.png" %}" class="newsImg">
-                            <h3 class="newsText">{{ new.header }}</h3>
+                            <img src="{{ post.previewImage.url }}" class="newsImg">
+                            <h3 class="newsText">{{ post.header }}</h3>
                         </div>
                    </div>
                 </a>
@@ -41,35 +34,18 @@
         </div>
     </div>
 </section>
+
 <section class="section">
     <div class="container">
         <h2 class="newsTitle">Информация</h2>
         <div class="cardList">
-            <div class="cardItem">
-                <h3 class="cardTitle">Новость</h3>
-                <p class="cardText">Современные технологии достигли такого уровня, что сплочённость команды профессионалов, а также свежий взгляд на привычные вещи — безусловно открывает новые горизонты для глубокомысленных рассуждений. В частности, сплочённость команды профессионалов играет важную роль в формировании приоретизации разума над эмоциями. С другой стороны, сплочённость команды профессионалов<a href="#" class="cardLink">...читать далее</a></p>
-            </div>
-
-            <div class="cardItem">
-                <h3 class="cardTitle">Новость</h3>
-                <p class="cardText">Современные технологии достигли такого уровня, что сплочённость команды профессионалов, а также свежий взгляд на привычные вещи — безусловно открывает новые горизонты для глубокомысленных рассуждений. В частности, сплочённость команды профессионалов играет важную роль в формировании приоретизации разума над эмоциями. С другой стороны, сплочённость команды профессионалов <a href="#" class="cardLink">...читать далее</a></p>
-
-            </div>
-
-            <div class="cardItem">
-                <h3 class="cardTitle">Новость</h3>
-                <p class="cardText">Современные технологии достигли такого уровня, что сплочённость команды профессионалов, а также свежий взгляд на привычные вещи — безусловно открывает новые горизонты для глубокомысленных рассуждений. В частности, сплочённость команды профессионалов играет важную роль в формировании приоретизации разума над эмоциями. С другой стороны, сплочённость команды профессионалов<a href="#" class="cardLink">...читать далее</a></p>
-
-            </div>
-
-            <div class="cardItem">
-                <h3 class="cardTitle">Порядок прохождения мед комиссии</h3>
-                <p class="cardText">Современные технологии достигли такого уровня, что сплочённость команды профессионалов, а также свежий взгляд на привычные вещи — безусловно открывает новые горизонты для глубокомысленных рассуждений. В частности, сплочённость команды профессионалов играет важную роль в формировании приоретизации разума над эмоциями. С другой стороны, сплочённость команды профессионалов<a href="#" class="cardLink">...читать далее</a></p>
-            </div>
-
+            {% for info in informations %}
+                <div class="cardItem">
+                    <h3 class="cardTitle">{{ info.header }}</h3>
+                    <p class="cardText">{{ info.text }}<a href="#" class="cardLink">...читать далее</a></p>
+                </div>
+            {% endfor %}
         </div>
-
-        <a href="#" class="btn">Вся информация<img src="{% static "/img/arrow.svg" %}"></a>
     </div>
 </section>
 {% endblock %}

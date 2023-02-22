@@ -5,65 +5,30 @@
     <div class="container">
         <h1 class="newsTitle">Уставные документы Автономной Некоммерческой организации
             «Центр помощи, поддержки, социальной и трудовой адаптации»</h1>
-
             <div class="containerDocs">
-                <div class="docsItem docsOpen">
-                    <h4 class="docsTitle">Устав АНО ЦППСТА</h4>
-                    <div class="containerImgDocs">
-                       <a class="linkDocks">
-                        <img class="imgDocs" src="{% static "/img/Rectangle.png" %}">
-                        <img class="imgSearh" src="{% static "/img/zoom.svg" %}">
-                       </a>
+                {% for doc in regular %}
+                    <div class="docsItem docsOpen">
+                        <h4 class="docsTitle">{{ doc.name }}</h4>
+                        <div class="containerImgDocs">
+                           <a class="linkDocks">
+                            <img class="imgDocs" src="{{ doc.previewImage.url }}">
+                           </a>
+                        </div>
                     </div>
-                </div>
-
-                <div class="docsItem">
-                    <h4 class="docsTitle">Устав АНО ЦППСТА</h4>
-                    <div class="containerImgDocs">
-                       <a class="linkDocks">
-                        <img class="imgDocs" src="{% static "/img/Rectangle.png" %}">
-                        <img class="imgSearh" src="{% static "/img/zoom.svg" %}">
-                       </a>
+                {% endfor %}
+            </div>
+        <h1 class="newsTitle">Прочие ДОКУМЕНТЫ</h1>
+            <div class="containerDocs">
+                {% for doc in other %}
+                    <div class="docsItem docsOpen">
+                        <h4 class="docsTitle">{{ doc.name }}</h4>
+                        <div class="containerImgDocs">
+                           <a class="linkDocks">
+                            <img class="imgDocs" src="{{ doc.previewImage.url }}">
+                           </a>
+                        </div>
                     </div>
-                </div>
-
-                <div class="docsItem">
-                    <h4 class="docsTitle">Устав АНО ЦППСТА</h4>
-                    <div class="containerImgDocs">
-                       <a class="linkDocks">
-                        <img class="imgDocs" src="{% static "/img/Rectangle.png" %}">
-                        <img class="imgSearh" src="{% static "/img/zoom.svg" %}">
-                       </a>
-                    </div>
-                </div>
-
-                <div class="docsItem">
-                    <h4 class="docsTitle">Устав АНО ЦППСТА</h4>
-                    <div class="containerImgDocs">
-                       <a class="linkDocks">
-                        <img class="imgDocs" src="{% static "/img/Rectangle.png" %}">
-                        <img class="imgSearh" src="{% static "/img/zoom.svg" %}">
-                       </a>
-                    </div>
-                </div>
-                <div class="docsItem">
-                    <h4 class="docsTitle">Устав АНО ЦППСТА</h4>
-                    <div class="containerImgDocs">
-                       <a class="linkDocks">
-                        <img class="imgDocs" src="{% static "/img/Rectangle.png" %}">
-                        <img class="imgSearh" src="{% static "/img/zoom.svg" %}">
-                       </a>
-                    </div>
-                </div>
-                <div class="docsItem">
-                    <h4 class="docsTitle">Устав АНО ЦППСТА</h4>
-                    <div class="containerImgDocs">
-                       <a class="linkDocks">
-                        <img class="imgDocs" src="{% static "/img/Rectangle.png" %}">
-                        <img class="imgSearh" src="{% static "/img/zoom.svg" %}">
-                       </a>
-                    </div>
-                </div>
+                {% endfor %}
             </div>
     </div>
 </section>

@@ -25,15 +25,12 @@
         </div>
 
         <div class="activityContainer">
-            <a href="#" class="activityItem">
-                <img loading="lazy" class="activity__img" src="{% static "/img/activityOne.png" %}">
-                <h3 class="activityTitle">Предмет деятельности</h3>
-            </a>
-
-            <a href="#" class="activityItem">
-                <img loading="lazy" class="activity__img" src="{% static "/img/activityTwo.png" %}">
-                <h3 class="activityTitle">Виды деятельности</h3>
-            </a>
+            {% for doc in docs %}
+                <a href="#" class="activityItem">
+                    <img loading="lazy" class="activity__img" src="{{ doc.previewImage.url }}">
+                    <h3 class="activityTitle">{{ doc.name}}</h3>
+                </a>
+            {% endfor %}
         </div>
     </div>
 </section>
