@@ -1,5 +1,16 @@
 {% extends '../base.html' %}
 {% load static %}
 {% block content %}
-<p>quest</p>
+<section class="section">
+    <div class="container">
+        <div class="aboutUscontainer">
+            {% for question in questions %}
+                <div>
+                    <h3 class="insuranceTitle">{{ question.header }}</h3>
+                    <p class="textNews">{{ question.text }}</p>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
 {% endblock %}

@@ -12,12 +12,6 @@ def index(request):
                   {'posts': posts, 'informations': informations, 'banners': banner_posts})
 
 
-def old_index(request):
-    posts = Post.objects.filter().order_by('-date')[:3]
-    informations = Information.objects.filter().order_by('-id')[:4]
-    return render(request, 'dist/index.html')
-
-
 def frequent_questions(request):
     questions = FrequentQuestions.objects.all()
     return render(request, 'main/frequent_questions.html', {'questions': questions})
@@ -25,3 +19,8 @@ def frequent_questions(request):
 
 def redirect_from_root(request):
     return redirect(to='/main/')
+
+
+def handler404(request, exception):
+    return render(request, '404.html', status=404)
+

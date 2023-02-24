@@ -1,0 +1,13 @@
+{% extends '../base.html' %}
+{% load static %}
+{% block content %}
+<section class="section">
+    <div class="containerErr">
+        <div class="errLogo">
+            <p class="errTitle">404</p>
+            <img class="noVakImg" src="{% static "images/logoGray.svg" %}">
+        </div>
+        <p class="errText">Такой страницы нет, перейти на главную</p>
+    </div>
+</section>
+{% endblock %}
