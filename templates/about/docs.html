@@ -1,0 +1,41 @@
+{% extends '../base.html' %}
+{% load static %}
+{% block content %}
+
+{% include 'modal/modal.html' %}
+
+<section class="section">
+    <div class="container">
+        <h1 class="newsTitle">Уставные документы Автономной Некоммерческой организации
+        «Центр помощи, поддержки, социальной и трудовой адаптации»</h1>
+        <div class="containerDocs">
+            {% for doc in regular %}
+                {% csrf_token %}
+                <div class="docsItem docsOpen" id="{{ doc.id }}">
+                    <h4 class="docsTitle">{{ doc.name }}</h4>
+                    <div class="containerImgDocs">
+                       <a class="linkDocks">
+                        <img class="imgDocs" src="{{ doc.previewImage.url }}">
+                       </a>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+
+        <h1 class="newsTitle">Прочие ДОКУМЕНТЫ</h1>
+        <div class="containerDocs">
+            {% for doc in other %}
+                {% csrf_token %}
+                <div class="docsItem docsOpen" id="{{ doc.id }}">
+                    <h4 class="docsTitle">{{ doc.name }}</h4>
+                    <div class="containerImgDocs">
+                       <a class="linkDocks">
+                        <img class="imgDocs" src="{{ doc.previewImage.url }}">
+                       </a>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+{% endblock %}

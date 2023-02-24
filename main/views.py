@@ -8,7 +8,7 @@ def index(request):
     posts = Post.objects.filter().order_by('-date')[:3]
     banner_posts = Post.objects.exclude(bannerImage='').order_by('-date')[:3]
     informations = Information.objects.filter().order_by('-date')[:4]
-    return render(request, 'static/main/index.html',
+    return render(request, 'main/index.html',
                   {'posts': posts, 'informations': informations, 'banners': banner_posts})
 
 
@@ -20,7 +20,7 @@ def old_index(request):
 
 def frequent_questions(request):
     questions = FrequentQuestions.objects.all()
-    return render(request, 'static/main/frequent_questions.html', {'questions': questions})
+    return render(request, 'main/frequent_questions.html', {'questions': questions})
 
 
 def redirect_from_root(request):
