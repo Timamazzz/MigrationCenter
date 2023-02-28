@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-g5y#kihgk5y2212g#-tqb=%qa$z3g)c#fhhns$c(vw_3==@of=
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['cppsta.ru', 'www.cppsta.ru']
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -83,8 +83,11 @@ WSGI_APPLICATION = 'MigrationCenter.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'u0545518_cppsta',
+        'USER': 'u0545518_cppsta',
+        'PASSWORD': 'u0545518_cppsta',
+        'HOST': 'localhost',
     }
 }
 
