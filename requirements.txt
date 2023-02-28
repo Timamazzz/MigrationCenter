@@ -13,3 +13,4 @@ Pillow==9.4.0
 sqlparse==0.4.3
 tzdata==2022.7
 Werkzeug==2.2.2
+whitenoise==6.4.0
