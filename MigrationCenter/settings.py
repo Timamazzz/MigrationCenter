@@ -23,9 +23,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-g5y#kihgk5y2212g#-tqb=%qa$z3g)c#fhhns$c(vw_3==@of='
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = ['31.31.196.78', 'cppsta.ru']
+ALLOWED_HOSTS = ['cppsta.ru', 'www.cppsta.ru']
 
 
 # Application definition
@@ -127,6 +127,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/4.1/howto/static-files/
 
 STATIC_URL = 'static/'
+STATIC_ROOT = 'static/'
 
 STATICFILES_DIRS = [
     BASE_DIR / "static/",
