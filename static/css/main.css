@@ -412,7 +412,7 @@ p {
 
 *::-webkit-scrollbar {
   height: 10px;
-  width: 12px;
+  width: 5px;
 }
 
 *::-webkit-scrollbar-track {
@@ -481,7 +481,7 @@ p {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  max-width: 1180px;
+  max-width: 1020px;
   margin: 0 auto;
 }
 
@@ -501,6 +501,16 @@ p {
   width: 260px;
   align-items: flex-end;
   flex-direction: column;
+}
+
+.phone{
+  font-family: 'Ruda';
+  font-style: normal;
+  font-weight: 800;
+  font-size: 15px;
+  line-height: 18px;
+  margin-right: 22px;
+  color: #AD001E;
 }
 
 .userProfileContainer .lng {
@@ -1252,7 +1262,6 @@ input[type=radio]:checked + label:after {
   height: 330px;
   border: 0.8px solid #FFC7D0;
   display: flex;
-  justify-content: center;
   flex-direction: column;
 }
 
@@ -1277,6 +1286,20 @@ input[type=radio]:checked + label:after {
   color: #000000;
   padding: 0 20px;
   margin: 0;
+}
+
+.cardItem .cardTextOver {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 300;
+  font-size: 12px;
+  line-height: 16px;
+  color: #000000;
+  padding: 0 20px;
+  margin: 0;
+  overflow: hidden;
+  height: 60%;
+  
 }
 
 .cardItem .cardLink {
@@ -2215,3 +2238,207 @@ input[type=radio]:checked + label:after {
   }
 }
 /*# sourceMappingURL=maps/main.css.map */
+@media (max-width: 1000px) {
+  .container{
+    max-width: 850px;
+  }
+
+  .containerService{
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .userProfileContainer{
+    display: none;
+  }
+  .headerTitle{
+    text-align: center;
+    width: 100%;
+  }
+  .headerContainer{
+    flex-direction: column;
+  }
+
+  .formSrch{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .searchContainer .containerSrc{
+    max-width: 100%;
+    margin-bottom: 20px;
+  }
+  .newsTitle{
+    margin-top: 50px;
+  }
+  .cardItem{
+    margin-bottom: 20px;
+  }
+  .modalCoocke .modalCoocke_content{
+    width: 100%;
+    margin: 50px 0;
+    padding: 10px 0;
+  }
+}
+
+@media (max-width: 850px) {
+  .servicesItem{
+    margin-right: 0;
+    margin: 15px;
+  }
+  .nav{
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10000;
+    opacity: 0;
+    pointer-events: none;
+    transition: .3s linear;
+    transform: translateX(-100%);
+  }
+  .nav.active{
+    opacity: 1;
+    pointer-events: all;
+    transition: .3s linear;
+    transform: translateX(0);
+  }
+  .search{
+    margin-top: 30px;
+  }
+
+  .newsSubTitle{
+    text-align: center;
+  }
+  .navContainer{
+    height: 100%;
+    width: 100%;
+    flex-direction: column;
+  }
+  .navContainer .navItem{
+    border: 0;
+  }
+
+  .navContainer .navItem:last-child{
+    border: 0;
+  }
+  .container{
+    max-width: 600px;
+  }
+  .containerNews{
+    justify-content: center;
+    overflow: auto;
+    max-height: 100%;
+  }
+  .cardItem{
+    margin-bottom: 20px;
+  }
+  .newsTitle{
+    text-align: center;
+    font-size: 15px;
+    line-height: 17px;
+  }
+  .navFooter{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .openNav{
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    z-index: 10001;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    content: '';
+    cursor: pointer;
+  }
+  .opennavItem{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    background-color: #9A40BC;
+  }
+  .opennavItem::after{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    top: 15px;
+    background-color: #9A40BC;
+  }
+  .opennavItem::before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    top: -15px;
+    background-color: #9A40BC;
+  }
+
+  .searchContainer .srch{
+    width: 98%;
+  }
+  .textNews{
+    width: 100%;
+  }
+  .footerGradient{
+    padding: 25px 20px;
+  }
+  .vakInphoPhone{
+    text-align: center;
+  }
+  .noVakText{
+    text-align: center;
+    margin-top: 10px;
+    font-size: 13px;
+  }
+  .noVakImg{
+    width: 50%;
+  }
+}
+
+
+@media (max-width: 540px) {
+  .cardList{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 45px;
+  }
+  .newNewsItem{
+    width: 100%;
+  }
+  .headerTitle{
+    font-size: 20px;
+  }
+  .footerContainer{
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0 20px;
+  }
+  .textFooter{
+    text-align: left;
+    width: 100%;
+  }
+  .navFooter {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .footerLinkItem{
+    margin-bottom: 10px;
+  }
+}

@@ -81,6 +81,11 @@ $('.docsOpen').on('click', function (e) {
   });
  }
 
+ $('.openNav').on('click', function () {
+  $('.nav').toggleClass("active");
+});
+
+
 $('.docsClose').on('click', function () {
   $('.modalDocs').removeClass("active");
   $('.modalDocs_content').removeClass("active");
