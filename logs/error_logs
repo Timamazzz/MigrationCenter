@@ -1,0 +1,38 @@
+[Wed Mar 08 22:50:28.044032 2023] [wsgi:error] [pid 32979] /home/timama/MigrationCenter/venv/lib/python3.8/site-packages/whitenoise/base.py:109: UserWarning: No directory at: /static/
+[Wed Mar 08 22:50:28.046593 2023] [wsgi:error] [pid 32979]   warnings.warn(f"No directory at: {root}")
+Exception ignored in: <function Local.__del__ at 0x7fb1cd9f0f70>
+Traceback (most recent call last):
+  File "/home/timama/MigrationCenter/venv/lib/python3.8/site-packages/asgiref/local.py", line 94, in __del__
+NameError: name 'TypeError' is not defined
+Exception ignored in: <function Local.__del__ at 0x7fb1cd9f0f70>
+Traceback (most recent call last):
+  File "/home/timama/MigrationCenter/venv/lib/python3.8/site-packages/asgiref/local.py", line 94, in __del__
+NameError: name 'TypeError' is not defined
+Exception ignored in: <function Local.__del__ at 0x7fb1cd9f0f70>
+Traceback (most recent call last):
+  File "/home/timama/MigrationCenter/venv/lib/python3.8/site-packages/asgiref/local.py", line 94, in __del__
+NameError: name 'TypeError' is not defined
+Exception ignored in: <function Local.__del__ at 0x7fb1cd9f0f70>
+Traceback (most recent call last):
+  File "/home/timama/MigrationCenter/venv/lib/python3.8/site-packages/asgiref/local.py", line 94, in __del__
+NameError: name 'TypeError' is not defined
+[Wed Mar 08 22:52:37.584067 2023] [wsgi:error] [pid 33142] /home/timama/MigrationCenter/venv/lib/python3.8/site-packages/whitenoise/base.py:109: UserWarning: No directory at: /static/
+[Wed Mar 08 22:52:37.584137 2023] [wsgi:error] [pid 33142]   warnings.warn(f"No directory at: {root}")
+[Wed Mar 08 22:54:03.614740 2023] [wsgi:error] [pid 33143] /home/timama/MigrationCenter/venv/lib/python3.8/site-packages/whitenoise/base.py:109: UserWarning: No directory at: /static/
+[Wed Mar 08 22:54:03.614807 2023] [wsgi:error] [pid 33143]   warnings.warn(f"No directory at: {root}")
+Exception ignored in: <function Local.__del__ at 0x7f52c471af70>
+Traceback (most recent call last):
+  File "/home/timama/MigrationCenter/venv/lib/python3.8/site-packages/asgiref/local.py", line 94, in __del__
+NameError: name 'TypeError' is not defined
+Exception ignored in: <function Local.__del__ at 0x7f52c4719f70>
+Traceback (most recent call last):
+  File "/home/timama/MigrationCenter/venv/lib/python3.8/site-packages/asgiref/local.py", line 94, in __del__
+NameError: name 'TypeError' is not defined
+Exception ignored in: <function Local.__del__ at 0x7f52c4719f70>
+Traceback (most recent call last):
+  File "/home/timama/MigrationCenter/venv/lib/python3.8/site-packages/asgiref/local.py", line 94, in __del__
+NameError: name 'TypeError' is not defined
+[Wed Mar 08 23:32:24.005602 2023] [wsgi:error] [pid 34925] /home/timama/MigrationCenter/venv/lib/python3.8/site-packages/whitenoise/base.py:109: UserWarning: No directory at: /static/
+[Wed Mar 08 23:32:24.005682 2023] [wsgi:error] [pid 34925]   warnings.warn(f"No directory at: {root}")
+[Wed Mar 08 23:39:17.364343 2023] [wsgi:error] [pid 34924] /home/timama/MigrationCenter/venv/lib/python3.8/site-packages/whitenoise/base.py:109: UserWarning: No directory at: /static/
+[Wed Mar 08 23:39:17.364402 2023] [wsgi:error] [pid 34924]   warnings.warn(f"No directory at: {root}")
