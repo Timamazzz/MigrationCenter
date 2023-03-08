@@ -146,9 +146,9 @@
             <div class="navContainer">
                 <a href="{% url 'main' %}" class="navItem">Главная</a>
                 <div class="navListCont">
-                    <a href="{% url 'us' %}" class="navItem">О нас</a>
+                    <a class="navItem">О нас</a>
                     <div class="navList">
-                        <a href="#" class="navItem">История</a>
+                        <a href="{% url 'us' %}"class="navItem">Об организации</a>
                         <a href="{% url 'area_of_activities' %}" class="navItem">Направления деятельности</a>
                         <a href="{% url 'docs' %}" class="navItem">Документы</a>
                         <a href="{% url 'vacancies' %}" class="navItem">вакансии</a>

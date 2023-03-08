@@ -70,6 +70,17 @@ $('.docsOpen').on('click', function (e) {
 
 });
 
+$(".cardTextOver").text(function(i, text) {
+  if (text.length >= 510) {
+    text = text.substring(0, 510);
+    var lastIndex = text.lastIndexOf(" ");       // позиция последнего пробела
+    text = text.substring(0, lastIndex); // обрезаем до последнего слова
+  }
+  
+  $(this).text(text).append('<a href="#" class="cardLink">...читать далее</a>');
+  
+});
+
  function openModal(docs_data){
   $('#modalDocsName').text(docs_data.name);
   $('#modalDocsText').text(docs_data.text);
@@ -167,17 +178,22 @@ $(document).ready(function () {
     autoplay: true,
     slickPlay: false,
     responsive: [{
-      breakpoint: 1624,
+      breakpoint: 1924,
       settings: {
-        draggable: true,
         slidesToShow: 3,
         slidesToScroll: 1
       }
     }, {
       breakpoint: 1324,
       settings: {
-        draggable: true,
         slidesToShow: 3,
+        slidesToScroll: 1
+      }
+    }, {
+    }, {
+      breakpoint: 824,
+      settings: {
+        slidesToShow: 1,
         slidesToScroll: 1
       }
     }, {
