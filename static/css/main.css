@@ -1441,7 +1441,7 @@ input[type=radio]:checked + label:after {
 .containerImgDocs .imgDocs {
   width: 140px;
   height: 200px;
-  object-fit: contain;
+  object-fit: cover;
 }
 
 .containerImgDocs .imgSearh {
@@ -2103,7 +2103,6 @@ input[type=radio]:checked + label:after {
 
 .activity__img {
   position: absolute;
-  z-index: 100;
   top: 0;
   width: 220px;
   height: 200px;
@@ -2350,6 +2349,7 @@ input[type=radio]:checked + label:after {
   }
   .container{
     max-width: 600px;
+    padding: 0 10px;
   }
   .containerNews{
     justify-content: center;
@@ -2427,6 +2427,30 @@ input[type=radio]:checked + label:after {
   .noVakImg{
     width: 50%;
   }
+
+  .containerDocs{
+    justify-content: center;
+  }
+  .docsItem{
+    margin: 10px;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .insuItem{
+    flex-direction: column;
+  }
+  .upContainerText{
+    flex-direction: column;
+
+  }
+  .upTestText{
+    width: 100%;
+  }
+  .textArea, .smallInput{
+    width: auto;
+  }
+  
 }
 
 
@@ -2462,5 +2486,11 @@ input[type=radio]:checked + label:after {
   }
   .footerLinkItem{
     margin-bottom: 10px;
+  }
+  .modalDocs_content{
+    transform: scale(.9);
+  }
+  .insuItemText, .testText{
+    overflow: hidden;
   }
 }
