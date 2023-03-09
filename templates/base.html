@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-    <title>gulp-scss-starter</title>
+    <title>{% block title %}{%  endblock %}</title>
 
     <meta name="theme-color" content="#fff">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
@@ -185,12 +185,12 @@
                 <img src="{% static "images/logoF.svg" %}" class="logoIcon">
             </div>
             <nav class="navFooter">
-                <a href="#" class="footerLinkItem">ГЛАВНАЯ</a>
-                <a href="#" class="footerLinkItem">уСЛУГИ</a>
-                <a href="#" class="footerLinkItem">ОБРАТНАЯ СВЯЗЬ</a>
-                <a href="#" class="footerLinkItem">о НАС</a>
-                <a href="#" class="footerLinkItem">НОВОСТИ</a>
-                <a href="#" class="footerLinkItem">КОНТАКТЫ</a>
+                <a href="{% url 'main' %}" class="footerLinkItem">ГЛАВНАЯ</a>
+                <a href="{% url 'services' %}" class="footerLinkItem">уСЛУГИ</a>
+                <a href="{% url 'feedback' %}" class="footerLinkItem">ОБРАТНАЯ СВЯЗЬ</a>
+                <a href="{% url 'us' %}" class="footerLinkItem">о НАС</a>
+                <a href="{% url 'news' %}" class="footerLinkItem">НОВОСТИ</a>
+                <a href="{% url 'contacts' %}" class="footerLinkItem">КОНТАКТЫ</a>
             </nav>
             <p class="textFooter">
                 Автономная Некоммерческая организация

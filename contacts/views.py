@@ -6,4 +6,6 @@ from contacts.models import *
 def contacts(request):
     contacts = Contact.objects.all()
     managers = Manager.objects.all()
-    return render(request, 'contacts/contacts.html', {'contacts': contacts, 'managers': managers})
+    title = 'Контакты'
+
+    return render(request, 'contacts/contacts.html', {'contacts': contacts, 'managers': managers, 'title': title})

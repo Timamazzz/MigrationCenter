@@ -3,4 +3,5 @@ from django.shortcuts import render
 
 # Create your views here.
 def feedback(request):
-    return render(request, 'feedback/feedback.html')
+    title = 'Контакты'
+    return render(request, 'feedback/feedback.html', {'title': title})
