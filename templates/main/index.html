@@ -2,6 +2,9 @@
 {% load static %}
 {% block title %}{{ title }}{% endblock %}
 {% block content %}
+
+{% include 'modal/modal.html' %}
+
 <section class="section__intro">
     <div class="slider__intro">
         {% for banner in banners %}
@@ -42,7 +45,7 @@
         <div class="cardList">
             {% for info in informations %}
             {% csrf_token %}
-                <div class="cardItem docsOpen">
+                <div class="cardItem docsOpen" id="{{ info.id }}">
                     <h3 class="cardTitle">{{ info.header }}</h3>
                     {% if info.text|length >= 500 %}
                         <p class="cardTextOver">{{ info.text }}</p>
