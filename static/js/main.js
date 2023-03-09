@@ -59,7 +59,7 @@ $('.docsOpen').on('click', function (e) {
         type:'POST',
         data: {id: doc_id},
         success:function(response){
-            /*console.log(response);*/
+            console.log(response);
             /*console.log(window.location.pathname);*/
             openModal(response);
         },
