@@ -5,16 +5,18 @@ from main.models import *
 
 # Create your views here.
 def index(request):
+    title = 'Миграционный центр'
     posts = Post.objects.filter().order_by('-date')[:3]
     banner_posts = Post.objects.exclude(bannerImage='').order_by('-date')[:3]
     informations = Information.objects.filter().order_by('-date')[:4]
     return render(request, 'main/index.html',
-                  {'posts': posts, 'informations': informations, 'banners': banner_posts})
+                  {'posts': posts, 'informations': informations, 'banners': banner_posts, 'title': title})
 
 
 def frequent_questions(request):
+    title = 'Частые вопросы'
     questions = FrequentQuestions.objects.all()
-    return render(request, 'main/frequent_questions.html', {'questions': questions})
+    return render(request, 'main/frequent_questions.html', {'questions': questions, 'title': title})
 
 
 def redirect_from_root(request):
@@ -22,5 +24,6 @@ def redirect_from_root(request):
 
 
 def handler404(request, exception):
-    return render(request, '404.html', status=404)
+    title = 'Не найдено'
+    return render(request, '404.html', {'title': title}, status=404)
 
