@@ -3,16 +3,20 @@ from django.shortcuts import render
 
 # Create your views here.
 def services(request):
-    return render(request, 'services/services.html')
+    title = 'Услуги'
+    return render(request, 'services/services.html', {'title': title})
 
 
 def insurance(request):
-    return render(request, 'services/insurance.html')
+    title = 'Страхование'
+    return render(request, 'services/insurance.html', {'title': title})
 
 
 def testing(request):
-    return render(request, 'services/testing.html')
+    title = 'Тестирование'
+    return render(request, 'services/testing.html', {'title': title})
 
 
 def translation(request):
-    return render(request, 'services/translation.html')
+    title = 'Перевод'
+    return render(request, 'services/translation.html', {'title': title})
