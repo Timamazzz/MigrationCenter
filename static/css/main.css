@@ -2058,6 +2058,7 @@ input[type=radio]:checked + label:after {
   text-align: justify;
   text-indent: 50px;
   color: #000000;
+  white-space: pre-line;
 }
 
 .aboutUscontainer {
@@ -2412,6 +2413,7 @@ input[type=radio]:checked + label:after {
   }
   .textNews{
     width: 100%;
+    white-space: pre-line;
   }
   .footerGradient{
     padding: 25px 20px;
