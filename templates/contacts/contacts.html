@@ -23,21 +23,24 @@
             </div>
         </div>
 
-        <h1 class="newsTitle">Руководители</h1>
+        {% if managers.exists %}
+            <h1 class="newsTitle">Руководители</h1>
 
-        <div class="containerManagers">
+            <div class="containerManagers">
+
             {% for man in managers %}
                 <div class="managersItem">
-                <h4 class="managersTitle">{{ man.post }}</h4>
-                <img class="photoManager" src="{{ man.image.url }}">
-                <h5 class="managersName">{{ man.first_name }} {{ man.middle_name }} {{ man.surname }}</h5>
-                <div class="managerContact">
-                    <a href="{{ man.phone }}" class="managerPhone">{{ man.phone }}</a>
-                    <a href="{{ man.email }}" class="managerMail">{{ man.email }}</a>
+                    <h4 class="managersTitle">{{ man.post }}</h4>
+                    <img class="photoManager" src="{{ man.image.url }}">
+                    <h5 class="managersName">{{ man.first_name }} {{ man.middle_name }} {{ man.surname }}</h5>
+                    <div class="managerContact">
+                        <a href="{{ man.phone }}" class="managerPhone">{{ man.phone }}</a>
+                        <a href="{{ man.email }}" class="managerMail">{{ man.email }}</a>
+                    </div>
                 </div>
+                {% endfor %}
             </div>
-            {% endfor %}
-        </div>
+        {% endif %}
     </div>
 </section>
 {% endblock %}
