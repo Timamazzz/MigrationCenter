@@ -150,22 +150,8 @@ $(document).ready(function () {
     autoplay: true,
     slickPlay: false,
     responsive: [{
-      breakpoint: 1624,
       settings: {
         draggable: true,
-        slidesToShow: 1,
-        slidesToScroll: 1
-      }
-    }, {
-      breakpoint: 1324,
-      settings: {
-        draggable: true,
-        slidesToShow: 1,
-        slidesToScroll: 1
-      }
-    }, {
-      breakpoint: 480,
-      settings: {
         slidesToShow: 1,
         slidesToScroll: 1
       }
@@ -178,7 +164,7 @@ $(document).ready(function () {
     autoplay: true,
     slickPlay: false,
     responsive: [{
-      breakpoint: 1924,
+      breakpoint: 1600,
       settings: {
         slidesToShow: 3,
         slidesToScroll: 1
