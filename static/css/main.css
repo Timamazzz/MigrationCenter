@@ -1265,7 +1265,7 @@ input[type=radio]:checked + label:after {
 .cardList {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: flex-start;
   flex-wrap: wrap;
   align-items: center;
   margin-bottom: 45px;
@@ -1281,6 +1281,11 @@ input[type=radio]:checked + label:after {
   overflow: hidden;
   padding-bottom: 20px;
   cursor: pointer;
+  margin-right: 10px;
+}
+
+.cardItem:last-child {
+  margin-right: 0;
 }
 
 .cardItem:hover{
@@ -1288,6 +1293,18 @@ input[type=radio]:checked + label:after {
 }
 
 .cardItem .cardTitle {
+  font-family: "Ruda";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+  text-transform: uppercase;
+  color: #AD001E;
+  margin-bottom: 25px;
+  padding-left: 20px;
+}
+
+.cardItem .cardTitleOver {
   font-family: "Ruda";
   font-style: normal;
   font-weight: 500;
@@ -1389,6 +1406,17 @@ input[type=radio]:checked + label:after {
   color: #AD001E;
   margin-top: 30px;
 }
+
+.cardTitleOver {
+  font-family: "Ruda";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+  color: #AD001E;
+  margin-top: 30px;
+}
+
 
 .hystoryText {
   font-family: "Roboto";
@@ -1943,7 +1971,7 @@ input[type=radio]:checked + label:after {
   font-family: "Roboto";
   font-style: normal;
   font-weight: 300;
-  font-size: 6px;
+  font-size: 9px;
   line-height: 10px;
   /* or 167% */
   text-align: justify;
