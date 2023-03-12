@@ -7,7 +7,7 @@
   \*********************************************/
 /***/ (() => {
 
-/*if (document.referrer.indexOf(window.location.origin) != -1) {
+if (document.referrer.indexOf(window.location.origin) != -1) {
   $('.modalCoocke').addClass("active");
   $('.modalCoocke_content').addClass("active");
   $('html, body').css({
@@ -15,7 +15,7 @@
   });
 } else {
   console.log("from external site");
-}*/
+}
 $('.modalCoockee_btn').on('click', function () {
   $('.modalCoocke').removeClass("active");
   $('.modalCoocke_content').removeClass("active");
@@ -67,6 +67,53 @@ $('.docsOpen').on('click', function (e) {
             console.log('something went wrong here');
         },
     });
+
+});
+
+$('.docsOpenModal').on('click', function (e) {
+  e.preventDefault();
+  let doc_id = $(this).attr('id');
+
+  function getCookie(name) {
+  var cookieValue = null;
+  if (document.cookie && document.cookie !== '') {
+      var cookies = document.cookie.split(';');
+      for (var i = 0; i < cookies.length; i++) {
+          var cookie = jQuery.trim(cookies[i]);
+          // Does this cookie string begin with the name we want?
+          if (cookie.substring(0, name.length + 1) === (name + '=')) {
+              cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
+              break;
+          }
+      }
+  }
+  return cookieValue;
+}
+  var csrftoken = getCookie('csrftoken');
+
+  function csrfSafeMethod(method) {
+      // these HTTP methods do not require CSRF protection
+      return (/^(GET|HEAD|OPTIONS|TRACE)$/.test(method));
+  }
+
+$.ajax({
+      beforeSend: function(xhr, settings) {
+          if (!csrfSafeMethod(settings.type) && !this.crossDomain) {
+              xhr.setRequestHeader("X-CSRFToken", csrftoken);
+          }
+      },
+      url:window.location.pathname,
+      type:'POST',
+      data: {id: doc_id},
+      success:function(response){
+          console.log(response);
+          /*console.log(window.location.pathname);*/
+          openModal(response);
+      },
+      error:function(){
+          console.log('something went wrong here');
+      },
+  });
 
 });
 
@@ -201,7 +248,30 @@ $(document).ready(function () {
       }
     }]
   });
+
+  $('.slider__introDocs').slick({
+    arrows: true,
+    nextArrow: '<div class="arrow__slider right"><i class="fas fa-chevron-right"></i></div>',
+    prevArrow: '<div class="arrow__slider left"><i class="fas fa-chevron-left"></i></div>',
+    autoplay: false,
+    slickPlay: true,
+    dots: true,
+    infinite: true,
+    responsive: [{
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1
+      }}, {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1
+        }
+      }]
+  });
+  
 });
+
 
 /***/ }),
 

@@ -931,11 +931,15 @@ input[type=radio]:checked + label:after {
   position: relative;
 }
 
+.modalHeaderDocs{
+  margin-top: 20px;
+}
+
 .modalDocs_text{
   font-family: 'Ruda';
   font-style: normal;
   font-weight: 500;
-  font-size: 12px;
+  font-size: 15px;
   line-height: 15px;
   color: #AD001E;
 }
@@ -1146,6 +1150,46 @@ input[type=radio]:checked + label:after {
   flex-direction: row-reverse;
   justify-content: space-between;
   width: 100%;
+}
+
+.slider__introDocs {
+  position: relative;
+  display: flex;
+  align-items: center;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.slider__introDocs > .arrow__slider.left{
+  left: 0;
+}
+
+.slider__introDocs > .arrow__slider.right{
+  right: 0;
+}
+
+.slider__introDocs > .arrow__slider i{
+  color: #FFC7D0;
+}
+
+.modalDocsImage{
+  width: 100%;
+  height: 300px;
+}
+
+.introDocs__item {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 500px;
+}
+
+.introDocs__img{
+  width: 100%;
+  height: 100%;
 }
 
 .intro__item {
@@ -1370,6 +1414,9 @@ input[type=radio]:checked + label:after {
   overflow: hidden;
   object-fit: cover;
   transition: 0.3s linear;
+  font-family: "Ruda";
+  font-style: normal;
+  font-weight: 700;
 }
 
 .btn img {
@@ -1626,7 +1673,6 @@ input[type=radio]:checked + label:after {
 
 .containerNews {
   display: flex;
-  justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
   max-height: 1000px;
@@ -1638,6 +1684,11 @@ input[type=radio]:checked + label:after {
   width: 325px;
   overflow: hidden;
   margin-bottom: 45px;
+  margin-right: 15px;
+}
+
+.newNewsItem:last-child {
+  margin-right: 0;
 }
 
 .newsDate {
@@ -2243,7 +2294,7 @@ input[type=radio]:checked + label:after {
   /* or 200% */
   margin-top: 20px;
   text-align: right;
-  width: 260px;
+  width: 270px;
   color: #AD001E;
 }
 
@@ -2270,23 +2321,11 @@ input[type=radio]:checked + label:after {
   color: #FFFFFF;
 }
 
-@media (max-width: 600px) {
-  .arrow__slider.left {
-    bottom: -60px;
-  }
-
-  .arrow__slider.right {
-    bottom: -60px;
-  }
-
-  .arrow__slider.left i {
-    color: #fff;
-  }
-
-  .arrow__slider.right i {
-    color: #fff;
-  }
+.map{
+  width: 500px;
+  height: 400px;
 }
+
 /*# sourceMappingURL=maps/main.css.map */
 @media (max-width: 1000px) {
   .container{
@@ -2325,9 +2364,9 @@ input[type=radio]:checked + label:after {
     margin-bottom: 20px;
   }
   .modalCoocke .modalCoocke_content{
-    width: 100%;
-    margin: 50px 0;
-    padding: 10px 0;
+    width: 70%;
+    margin: 100px auto;
+    padding: 10px 30px;
   }
 }
 
@@ -2480,6 +2519,20 @@ input[type=radio]:checked + label:after {
   .textArea, .smallInput{
     width: auto;
   }
+  .conatainerContact{
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .map{
+    width: 100%;
+    height: 300px;
+  }
+
+  .contactInfo{
+    margin-top: 20px;
+  }
   
 }
 
@@ -2492,8 +2545,12 @@ input[type=radio]:checked + label:after {
     flex-wrap: wrap;
     margin-top: 45px;
   }
+  .cardItem{
+    margin-right: 0;
+  }
+
   .newNewsItem{
-    width: 100%;
+    margin-right: 0;
   }
   .headerTitle{
     font-size: 20px;
@@ -2518,9 +2575,12 @@ input[type=radio]:checked + label:after {
     margin-bottom: 10px;
   }
   .modalDocs_content{
-    transform: scale(.9);
+    transform: scale(.7);
   }
   .insuItemText, .testText{
     overflow: hidden;
+  }
+  .containerManagers{
+    justify-content: center;
   }
 }
