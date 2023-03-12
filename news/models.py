@@ -3,12 +3,12 @@ import os
 from django.db import models
 
 
-def get_news_gallery_path(instance, filename, sub_path):
-    if instance.pk is None:
-        return os.path.join('images/', str(1 if Post.objects.last() is None else Post.objects.last().id + 1),
+def get_news_gallery_path(instance, filename):
+    if instance.news is None:
+        return os.path.join('images/posts', str(1 if Post.objects.last() is None else Post.objects.last().id + 1),
                             'gallery', filename)
     else:
-        return os.path.join('images/posts', str(instance.pk), 'gallery', filename)
+        return os.path.join('images/posts', str(instance.news.id), 'gallery', filename)
 
 
 def get_news_banner_path(instance, filename):
