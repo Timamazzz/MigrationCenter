@@ -15,6 +15,7 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
+import MigrationCenter.views
 from main import views
 from django.conf.urls.static import static
 from django.conf import settings
@@ -30,4 +31,4 @@ urlpatterns = [
     path('', views.redirect_from_root, name='redirect from root')
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
-handler404 = 'main.views.handler404'
+handler404 = 'MigrationCenter.views.handler404'
