@@ -81,6 +81,17 @@ $(".cardTextOver").text(function(i, text) {
   
 });
 
+$(".cardTitleOver").text(function(i, text) {
+  if (text.length >= 23) {
+    text = text.substring(0, 23);
+    var lastIndex = text.lastIndexOf(" ");       // позиция последнего пробела
+    text = text.substring(0, lastIndex); // обрезаем до последнего слова
+  }
+  
+  $(this).text(text).append('...');
+  
+});
+
  function openModal(docs_data){
   $('#modalDocsName').text(docs_data.name);
   $('#modalDocsText').text(docs_data.text);

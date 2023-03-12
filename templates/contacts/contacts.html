@@ -12,8 +12,8 @@
                             <h4 class="contactInfoText">{{ con.name }}</h4>
 
                             <div class="contactInfoCont">
-                                <a href="{{ con.phone }}" class="phoneContact">{{ con.phone }}</a>
-                                <a href="{{ con.email }}" class="mailContact">{{ con.email }}</a>
+                                <a href="tel:{{ con.phone }}" class="phoneContact">{{ con.phone }}</a>
+                                <a href="mailto:{{ con.email }}" class="mailContact">{{ con.email }}</a>
                             </div>
                         </div>
                     {% endfor %}
@@ -34,8 +34,8 @@
                     <img class="photoManager" src="{{ man.image.url }}">
                     <h5 class="managersName">{{ man.first_name }} {{ man.middle_name }} {{ man.surname }}</h5>
                     <div class="managerContact">
-                        <a href="{{ man.phone }}" class="managerPhone">{{ man.phone }}</a>
-                        <a href="{{ man.email }}" class="managerMail">{{ man.email }}</a>
+                        <a href="tel:{{ man.phone }}" class="managerPhone">{{ man.phone }}</a>
+                        <a href="mailto:{{ man.email }}" class="managerMail">{{ man.email }}</a>
                     </div>
                 </div>
                 {% endfor %}
