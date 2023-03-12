@@ -1,4 +1,4 @@
-from django.http import JsonResponse, HttpResponse
+from django.http import JsonResponse
 from django.shortcuts import render, redirect
 from news.models import *
 from main.models import *
@@ -29,8 +29,3 @@ def frequent_questions(request):
 
 def redirect_from_root(request):
     return redirect(to='/main/')
-
-
-def handler404(request, exception):
-    title = 'Не найдено'
-    return render(request, '404.html', {'title': title}, status=404)
