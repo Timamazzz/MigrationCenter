@@ -1,65 +1,69 @@
 {% extends '../base.html' %}
 {% load static %}
+
 {% block title %}{{ title }}{% endblock %}
+
 {% block content %}
 
-{% include 'modal/modal.html' %}
+    {% include 'modal/modal.html' %}
 
-<section class="section__intro">
-    <div class="slider__intro">
-        {% for banner in banners %}
-            <div class="intro__item">
-                <img loading="lazy" class="intro__img" src="{{ banner.bannerImage.url }}">
-                <div class="intro__item-container">
-                    <h2 class="intro__text">{{ banner.bannerHeader }}</h2>
-                    <h2 class="intro__title">{{ banner.bannerText }}</h2>
+    <section class="section__intro">
+        <div class="slider__intro">
+            {% for banner in banners %}
+                <div class="intro__item">
+                    <img loading="lazy" class="intro__img" src="{{ banner.bannerImage.url }}">
+                    <div class="intro__item-container">
+                        <h2 class="intro__text">{{ banner.bannerHeader }}</h2>
+                        <h2 class="intro__title">{{ banner.bannerText }}</h2>
+                    </div>
+                    <a href="{% url 'post' banner.id %}" class="btn">Перейти <img src="{% static "images/arrow.svg" %}" alt=""></a>
                 </div>
-                <a href="{% url 'post' banner.id %}" class="btn">Перейти <img src="{% static "images/arrow.svg" %}" alt=""></a>
+            {% endfor %}
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <h1 class="newsTitle">Новости</h1>
+            <div class="containerNews">
+                {% for post in posts %}
+                    <a href="{% url 'post' post.id %}" class="linkNewNews">
+                        <div class="newNewsItem">
+                            <p class="newsDate">{{ post.date }}</p>
+                            <div class="nontentNews">
+                                <img src="{{ post.previewImage.url }}" class="newsImg">
+                                <h3 class="newsText">{{ post.header }}</h3>
+                            </div>
+                       </div>
+                    </a>
+                {% endfor %}
             </div>
-        {% endfor %}
-    </div>
-</section>
-
-<section class="section">
-    <div class="container">
-        <h1 class="newsTitle">Новости</h1>
-        <div class="containerNews">
-            {% for post in posts %}
-                <a href="{% url 'post' post.id %}" class="linkNewNews">
-                    <div class="newNewsItem">
-                        <p class="newsDate">{{ post.date }}</p>
-                        <div class="nontentNews">
-                            <img src="{{ post.previewImage.url }}" class="newsImg">
-                            <h3 class="newsText">{{ post.header }}</h3>
-                        </div>
-                   </div>
-                </a>
-            {% endfor %}
         </div>
-    </div>
-</section>
+    </section>
 
-<section class="section">
-    <div class="container">
-        <h2 class="newsTitle">Информация</h2>
-        <div class="cardList">
-            {% for info in informations %}
-            {% csrf_token %}
-                <div class="cardItem docsOpen" id="{{ info.id }}">
-                    {% if info.header|length >= 23 %}
-                        <h3 class="cardTitleOver">{{ info.header }}</h3>
-                    {% else %}
-                        <h3 class="cardTitle">{{ info.header }}</h3>
-                    {% endif %}
+    <section class="section">
+        <div class="container">
+            <h2 class="newsTitle">Информация</h2>
+            <div class="cardList">
+                {% for info in informations %}
+                {% csrf_token %}
+                    <div class="cardItem docsOpen" id="{{ info.id }}">
+                        {% if info.header|length >= 23 %}
+                            <h3 class="cardTitleOver">{{ info.header }}</h3>
+                        {% else %}
+                            <h3 class="cardTitle">{{ info.header }}</h3>
+                        {% endif %}
 
-                    {% if info.text|length >= 500 %}
-                        <p class="cardTextOver">{{ info.text }}</p>
-                    {% else %}
-                        <p class="cardText">{{ info.text }}</p>
-                    {% endif %}
-                </div>
-            {% endfor %}
+                        {% if info.text|length >= 500 %}
+                            <p class="cardTextOver">{{ info.text }}</p>
+                        {% else %}
+                            <p class="cardText">{{ info.text }}</p>
+                        {% endif %}
+                    </div>
+                {% endfor %}
+            </div>
+            <a href="{% url 'informations' %}" class="btn">Вся информация</a>
         </div>
-    </div>
-</section>
+    </section>
+
 {% endblock %}

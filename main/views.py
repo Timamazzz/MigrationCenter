@@ -29,3 +29,15 @@ def frequent_questions(request):
 
 def redirect_from_root(request):
     return redirect(to='/main/')
+
+
+def informations(request):
+    title = 'Информация'
+    informations = Information.objects.all()
+    if request.method == 'POST':
+        info = Information.objects.get(id=int(request.POST.get('id')))
+        name = info.header
+        text = info.text
+        return JsonResponse({'name': name, 'text': text})
+    else:
+        return render(request, 'main/informations.html', {'informations': informations, 'title': title})
