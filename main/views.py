@@ -6,7 +6,7 @@ from main.models import *
 
 # Create your views here.
 def index(request):
-    title = 'Миграционный центр'
+    title = 'Центр помощи, поддержки, социальной и трудовой адаптации'
     posts = Post.objects.filter().order_by('-date')[:3]
     banner_posts = Post.objects.exclude(bannerImage='').order_by('-date')[:3]
     informations = Information.objects.filter().order_by('-date')[:4]
