@@ -14,7 +14,7 @@ def us(request):
         doc = AdditionalActivity.objects.get(id=int(request.POST.get('id')))
         name = doc.name
         text = doc.text
-        return HttpResponse(render_to_string('about/us.html', {'name': name, 'text': text}))
+        return JsonResponse({'name': name, 'text': text})
     else:
         return render(request, 'about/us.html', {'docs': docs, 'title': title})
 
