@@ -8,7 +8,7 @@ from main.models import *
 def index(request):
     title = 'Центр помощи, поддержки, социальной и трудовой адаптации'
     posts = Post.objects.filter().order_by('-date')[:3]
-    banner_posts = Post.objects.exclude(bannerImage='').order_by('-date')[:3]
+    banners = MainBanner.objects.filter(is_active=True).order_by('-date')
     informations = Information.objects.filter().order_by('-date')[:4]
 
     if request.method == 'POST':
@@ -18,7 +18,7 @@ def index(request):
         return JsonResponse({'name': name, 'text': text})
     else:
         return render(request, 'main/index.html',
-                      {'posts': posts, 'informations': informations, 'banners': banner_posts, 'title': title})
+                      {'posts': posts, 'informations': informations, 'banners': banners, 'title': title})
 
 
 def frequent_questions(request):

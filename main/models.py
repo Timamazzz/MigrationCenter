@@ -1,5 +1,15 @@
-from django.db import models
+import os
 import datetime
+from django.db import models
+from news.models import Post
+
+
+def get_news_banner_path(instance, filename):
+    if instance.pk is None:
+        return os.path.join('images/banner',
+                            str(1 if MainBanner.objects.last() is None else MainBanner.objects.last().id + 1), filename)
+    else:
+        return os.path.join('images/banner', str(instance.pk), filename)
 
 
 # Create your models here.
@@ -12,3 +22,12 @@ class Information(models.Model):
 class FrequentQuestions(models.Model):
     header = models.CharField(max_length=256)
     text = models.TextField()
+
+
+class MainBanner(models.Model):
+    image = models.ImageField(upload_to=get_news_banner_path)
+    header = models.CharField(max_length=256, blank=True)
+    text = models.TextField(blank=True)
+    post = models.ForeignKey(Post, on_delete=models.CASCADE, blank=True, null=True)
+    date = models.DateField(default=datetime.date.today())
+    is_active = models.BooleanField(default=True)

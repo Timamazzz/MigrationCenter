@@ -11,12 +11,14 @@
         <div class="slider__intro">
             {% for banner in banners %}
                 <div class="intro__item">
-                    <img loading="lazy" class="intro__img" src="{{ banner.bannerImage.url }}">
+                    <img loading="lazy" class="intro__img" src="{{ banner.image.url }}">
                     <div class="intro__item-container">
-                        <h2 class="intro__text">{{ banner.bannerHeader }}</h2>
-                        <h2 class="intro__title">{{ banner.bannerText }}</h2>
+                        <h2 class="intro__text">{{ banner.header }}</h2>
+                        <h2 class="intro__title">{{ banner.text }}</h2>
                     </div>
-                    <a href="{% url 'post' banner.id %}" class="btn">Перейти <img src="{% static "images/arrow.svg" %}" alt=""></a>
+                    {% if banner.post is not Null %}
+                        <a href="{% url 'post' banner.post.id %}" class="btn">Перейти <img src="{% static "images/arrow.svg" %}" alt=""></a>
+                    {% endif %}
                 </div>
             {% endfor %}
         </div>
