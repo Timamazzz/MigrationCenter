@@ -29,7 +29,6 @@ ALLOWED_HOSTS = ['89.108.98.220', 'cppsta.ru', 'www.cppsta.ru', 'localhost', '12
 # Application definition
 
 INSTALLED_APPS = [
-    'whitenoise',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -46,7 +45,6 @@ INSTALLED_APPS = [
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
-    'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
