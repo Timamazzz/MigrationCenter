@@ -11,8 +11,3 @@ class PostImageAdmin(admin.StackedInline):
 class PostAdmin(admin.ModelAdmin):
     inlines = [PostImageAdmin]
     model = Post
-
-
-@admin.register(PostImage)
-class PostImageAdmin(admin.ModelAdmin):
-    pass
