@@ -4,8 +4,9 @@ from django.db import models
 # Create your models here.
 class Contact(models.Model):
     name = models.CharField(max_length=256)
-    phone = models.CharField(max_length=20)
-    email = models.EmailField(max_length=20)
+    phone = models.CharField(max_length=20, blank=True)
+    email = models.EmailField(max_length=60, blank=True)
+    address = models.CharField(max_length=256, blank=True)
 
 
 class Manager(models.Model):

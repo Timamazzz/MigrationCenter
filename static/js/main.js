@@ -107,8 +107,7 @@ $.ajax({
       data: {id: doc_id},
       success:function(response){
           console.log(response);
-          /*console.log(window.location.pathname);*/
-          openModal(response);
+          openImageModal(response);
       },
       error:function(){
           console.log('something went wrong here');
@@ -149,7 +148,23 @@ $(".cardTitleOver").text(function(i, text) {
     overflow: 'hidden'
   });
  }
+ function openImageModal(docs_data){
+         let images = JSON.parse(docs_data.images)
+         let block;
+         images.map((item, index)=>{
+             let url = 'http://cppsta.ru/media/' + item.fields.image
+              $('.section__introModal').append(
+                 '<div class = "introDocs__item"> <img loading="lazy" class="introDocs__img" src=' + url + '></div>'
+              )
+         })
 
+        $('#modalDocsName').text(docs_data.name);
+        $('.modalDocs').addClass("active");
+        $('.modalDocs_content').addClass("active");
+        $('html, body').css({
+        overflow: 'hidden'
+        });
+ }
  $('.openNav').on('click', function () {
   $('.nav').toggleClass("active");
 });
@@ -158,6 +173,7 @@ $(".cardTitleOver").text(function(i, text) {
 $('.docsClose').on('click', function () {
   $('.modalDocs').removeClass("active");
   $('.modalDocs_content').removeClass("active");
+   $('.introDocs__item').remove()
   $('html, body').css({
     overflow: 'auto'
   });
