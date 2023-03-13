@@ -5,11 +5,11 @@ from .models import *
 
 # Create your views here.
 def us(request):
-    docs = Document.objects.filter(type='Additional_activity')
+    docs = AdditionalActivity.objects.all()
     title = 'О нас'
 
     if request.method == 'POST':
-        doc = Document.objects.get(id=int(request.POST.get('id')))
+        doc = AdditionalActivity.objects.get(id=int(request.POST.get('id')))
         name = doc.name
         text = doc.text
         return JsonResponse({'name': name, 'text': text})
@@ -18,11 +18,11 @@ def us(request):
 
 
 def area_of_activities(request):
-    docs = Document.objects.filter(type='AreaOfActivity')
+    docs = AreaOfActivity.objects.all()
     title = 'Направления деятельности'
 
     if request.method == 'POST':
-        doc = Document.objects.get(id=int(request.POST.get('id')))
+        doc = AreaOfActivity.objects.get(id=int(request.POST.get('id')))
         name = doc.name
         text = doc.text
         return JsonResponse({'name': name, 'text': text})
