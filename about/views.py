@@ -1,6 +1,8 @@
-from django.http import JsonResponse
+from django.core import serializers
+from django.http import JsonResponse, HttpResponse
 from django.shortcuts import render
 from .models import *
+from django.template.loader import render_to_string
 
 
 # Create your views here.
@@ -12,7 +14,7 @@ def us(request):
         doc = AdditionalActivity.objects.get(id=int(request.POST.get('id')))
         name = doc.name
         text = doc.text
-        return JsonResponse({'name': name, 'text': text})
+        return HttpResponse(render_to_string('about/us.html', {'name': name, 'text': text}))
     else:
         return render(request, 'about/us.html', {'docs': docs, 'title': title})
 
@@ -38,8 +40,9 @@ def docs(request):
     if request.method == 'POST':
         doc = Document.objects.get(id=int(request.POST.get('id')))
         name = doc.name
-        text = doc.text
-        return JsonResponse({'name': name, 'text': text})
+        images = DocImage.objects.filter(document__id=doc.id)
+        images = serializers.serialize('json', images)
+        return JsonResponse({'name': name, 'images': images})
     else:
         return render(request, 'about/docs.html', {'regular': regular_docs, 'other': other_docs, 'title': title})
 

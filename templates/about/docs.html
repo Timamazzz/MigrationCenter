@@ -12,7 +12,7 @@
         <div class="containerDocs">
             {% for doc in regular %}
                 {% csrf_token %}
-                <div class="docsItem docsOpen" id="{{ doc.id }}">
+                <div class="docsItem docsOpenModal" id="{{ doc.id }}">
                     <h4 class="docsTitle">{{ doc.name }}</h4>
                     <div class="containerImgDocs">
                        <a class="linkDocks">
