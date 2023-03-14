@@ -2378,6 +2378,12 @@ input[type=radio]:checked + label:after {
 }
 
 @media (max-width: 850px) {
+  .imgAboutContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
   .servicesItem{
     margin-right: 0;
     margin: 15px;
