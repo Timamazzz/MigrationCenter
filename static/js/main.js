@@ -167,6 +167,8 @@ $(".cardTitleOver").text(function(i, text) {
  }
  $('.openNav').on('click', function () {
   $('.nav').toggleClass("active");
+  $('body').toggleClass("bodyActive");
+  $('#nav-icon6').toggleClass("open");
 });
 
 

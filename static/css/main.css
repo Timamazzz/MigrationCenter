@@ -2115,7 +2115,9 @@ input[type=radio]:checked + label:after {
   font-size: 25px;
 }
 
-
+.imgNav{
+  display: none;
+}
 
 .slider__introNews .arrow__slider.left {
   left: 0px;
@@ -2376,6 +2378,12 @@ input[type=radio]:checked + label:after {
 }
 
 @media (max-width: 850px) {
+  .imgAboutContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
   .servicesItem{
     margin-right: 0;
     margin: 15px;
@@ -2456,29 +2464,68 @@ input[type=radio]:checked + label:after {
     content: '';
     cursor: pointer;
   }
-  .opennavItem{
-    content: '';
-    position: absolute;
-    width: 100%;
-    height: 3px;
+
+  #nav-icon6 {
+    transition-duration: 1s;
+    cursor: pointer;
+}
+#nav-icon6 span {
+    height: 6px;
+    width: 50px;
     background-color: #9A40BC;
-  }
-  .opennavItem::after{
-    content: '';
+    border-radius: 20px;
     position: absolute;
-    width: 100%;
-    height: 3px;
-    top: 15px;
-    background-color: #9A40BC;
-  }
-  .opennavItem::before{
-    content: '';
+    transition-duration: .25s;
+    transition-delay: .25s;
+}
+#nav-icon6 span:before {
+    left: 0;
     position: absolute;
-    width: 100%;
-    height: 3px;
-    top: -15px;
+    top: -12px;
+    height: 6px;
+    width: 50px;
     background-color: #9A40BC;
-  }
+    content: "";
+    border-radius: 20px;
+    transition-duration: .25s;
+    transition: transform .25s, top .25s .25s;
+}
+#nav-icon6 span:after {
+    left: 0;
+    position: absolute;
+    top: 12px;
+    height: 6px;
+    width: 50px;
+    background-color: #9A40BC;
+    content: "";
+    border-radius: 20px;
+    transition-duration: .25s;
+    transition: transform .25s, top .25s .25s;
+}
+#nav-icon6.open span {
+    transition-duration: 0.1s;
+    transition-delay: .25s;
+    background: transparent;
+}
+#nav-icon6.open span:before {
+    transition: top .25s, transform .25s .25s;
+    top: 0px;
+    transform: rotateZ(-45deg);
+}
+#nav-icon6.open span:after {
+    transition: top 0.4s, transform .25s .25s;
+    top: 0px;
+    transform: rotateZ(45deg);
+}
+
+.bodyActive{
+  overflow: hidden;
+}
+
+.imgNav{
+  display: block;
+  margin-bottom: 10px;
+}
 
   .searchContainer .srch{
     width: 98%;
