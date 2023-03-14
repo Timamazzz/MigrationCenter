@@ -2585,7 +2585,9 @@ input[type=radio]:checked + label:after {
   .contactInfo{
     margin-top: 20px;
   }
-  
+  .docsItem:last-child{
+    margin-right: 10px;
+  }
 }
 
 
@@ -2634,5 +2636,13 @@ input[type=radio]:checked + label:after {
   }
   .containerManagers{
     justify-content: center;
+  }
+
+  .arrow__slider.right{
+    right: 0;
+  }
+
+  .arrow__slider.left{
+    left: 0;
   }
 }
