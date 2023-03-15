@@ -28,6 +28,6 @@ class MainBanner(models.Model):
     image = models.ImageField(upload_to=get_news_banner_path)
     header = models.CharField(max_length=256, blank=True)
     text = models.TextField(blank=True)
-    post = models.ForeignKey(Post, on_delete=models.CASCADE, blank=True, null=True)
+    link = models.CharField(max_length=2048, blank=True, null=True)
     date = models.DateField(default=datetime.date.today())
     is_active = models.BooleanField(default=True)

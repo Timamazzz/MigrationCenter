@@ -16,8 +16,8 @@
                         <h2 class="intro__text">{{ banner.header }}</h2>
                         <h2 class="intro__title">{{ banner.text }}</h2>
                     </div>
-                    {% if banner.post is not Null %}
-                        <a href="{% url 'post' banner.post.id %}" class="btn">Перейти <img src="{% static "images/arrow.svg" %}" alt=""></a>
+                    {% if banner.link is not Null %}
+                        <a href="{{ banner.link }}" class="btn">Перейти <img src="{% static "images/arrow.svg" %}" alt=""></a>
                     {% endif %}
                 </div>
             {% endfor %}
