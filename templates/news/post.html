@@ -6,15 +6,25 @@
     <div class="container">
         <h1 class="newsTitle">Новости</h1>
         <h3 class="newsSubTitle">{{ post.header }}</h3>
-        <div class="section__intro">
-            <div class="slider__introNews">
+        {% if gallery.count <= 3 %}
+            <div class="notSliderNewsImageContainer">
                 {% for img in gallery %}
-                    <div class="introNews__item">
+                    <div class="notSliderNewsImageContainer">
                         <img loading="lazy" class="introNews__img" src="{{ img.image.url }}">
                     </div>
                 {% endfor %}
             </div>
-        </div>
+        {% else %}
+            <div class="section__intro">
+                <div class="slider__introNews">
+                    {% for img in gallery %}
+                        <div class="introNews__item">
+                            <img loading="lazy" class="introNews__img" src="{{ img.image.url }}">
+                        </div>
+                    {% endfor %}
+                </div>
+            </div>
+        {% endif %}
 
         <p class="textNews">{{ post.text }}</p>
     </div>

@@ -489,6 +489,16 @@ p {
   width: 100%;
 }
 
+.notSliderNewsImageContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.notSliderNewsImage {
+
+}
+
 .headerTitle {
   width: 585px;
   color: #AD001E;

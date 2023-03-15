@@ -240,7 +240,7 @@ $(document).ready(function () {
     autoplay: true,
     slickPlay: false,
     responsive: [{
-      breakpoint: 1600,
+      breakpoint: 1920,
       settings: {
         slidesToShow: 3,
         slidesToScroll: 1
