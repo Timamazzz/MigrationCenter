@@ -1522,6 +1522,16 @@ input[type=radio]:checked + label:after {
   color: #AD001E;
 }
 
+.docsTitleOver {
+  width: 135px;
+  font-family: "Ruda";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 15px;
+  color: #AD001E;
+}
+
 .containerImgDocs {
   position: relative;
   width: 140px;

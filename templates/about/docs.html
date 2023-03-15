@@ -13,7 +13,11 @@
             {% for doc in regular %}
                 {% csrf_token %}
                 <div class="docsItem docsOpenModal" id="{{ doc.id }}">
-                    <h4 class="docsTitle">{{ doc.name }}</h4>
+                    {% if doc.name|length > 22 %}
+                        <h4 class="docsTitleOver">{{ doc.name }}</h4>
+                    {% else %}
+                        <h4 class="docsTitle">{{ doc.name }}</h4>
+                    {% endif %}
                     <div class="containerImgDocs">
                        <a class="linkDocks">
                         <img class="imgDocs" src="{{ doc.previewImage.url }}">
@@ -28,7 +32,11 @@
             {% for doc in other %}
                 {% csrf_token %}
                 <div class="docsItem docsOpenModal" id="{{ doc.id }}">
-                    <h4 class="docsTitle">{{ doc.name }}</h4>
+                    {% if doc.name|length > 22 %}
+                        <h4 class="docsTitleOver">{{ doc.name }}</h4>
+                    {% else %}
+                        <h4 class="docsTitle">{{ doc.name }}</h4>
+                    {% endif %}
                     <div class="containerImgDocs">
                        <a class="linkDocks">
                         <img class="imgDocs" src="{{ doc.previewImage.url }}">
