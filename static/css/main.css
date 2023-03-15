@@ -489,6 +489,16 @@ p {
   width: 100%;
 }
 
+.notSliderNewsImageContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.notSliderNewsImage {
+
+}
+
 .headerTitle {
   width: 585px;
   color: #AD001E;
@@ -1503,6 +1513,16 @@ input[type=radio]:checked + label:after {
 }
 
 .docsTitle {
+  width: 135px;
+  font-family: "Ruda";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 15px;
+  color: #AD001E;
+}
+
+.docsTitleOver {
   width: 135px;
   font-family: "Ruda";
   font-style: normal;
