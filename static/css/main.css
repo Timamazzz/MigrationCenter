@@ -1161,10 +1161,6 @@ input[type=radio]:checked + label:after {
 
 .slider__intro {
   position: relative;
-  display: flex;
-  align-items: center;
-  flex-direction: row-reverse;
-  justify-content: space-between;
   width: 100%;
 }
 
@@ -1304,10 +1300,12 @@ input[type=radio]:checked + label:after {
 
 .arrow__slider.left {
   left: 150px;
+  top: 100px;
 }
 
 .arrow__slider.right {
   right: 150px;
+  top: 100px;
 }
 
 .newsTitle {
