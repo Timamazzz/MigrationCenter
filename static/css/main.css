@@ -1300,12 +1300,12 @@ input[type=radio]:checked + label:after {
 
 .arrow__slider.left {
   left: 150px;
-  top: 100px;
+  top: 200px;
 }
 
 .arrow__slider.right {
   right: 150px;
-  top: 100px;
+  top: 200px;
 }
 
 .newsTitle {
