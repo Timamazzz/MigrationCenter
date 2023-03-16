@@ -2658,9 +2658,11 @@ input[type=radio]:checked + label:after {
 
   .arrow__slider.right{
     right: 0;
+    top: 200px
   }
 
   .arrow__slider.left{
     left: 0;
+    top: 200px
   }
 }
