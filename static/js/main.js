@@ -184,14 +184,26 @@ $(".docsTitleOver").text(function(i, text) {
 
 $(document).ready(function() {
   var text = $(".textNews").html(); 
-  var urlRegex = /(https?:\/\/[^\s]+)/g;
-  var newText = text.replace(urlRegex, '<a href="$1" target="_blank">$1</a>'); 
+  var reg = /{(.+?)}/g;
+  
+  var links = text.match(reg);
+  var newText = text;
+
+  links.map( (item) => {
+    var link = item.split(';')[0].slice(1, -1);
+    var name = link;
+
+    if(item.split(';')[1] != undefined) {
+      var name = item.split(';')[1].slice(0, -1);
+    }
+
+      newText = newText.replace(item, '<a href="'+link+'">'+ name +'</a>');
+      console.log(newText)
+    }
+  )
   $(".textNews").html(newText); 
   
-  $(".textNews a").each(function() {
-    var urlName = $(this).attr("href");
-    $(this).text(urlName.split(';')[1]);
-  });
+
 });
 
 
