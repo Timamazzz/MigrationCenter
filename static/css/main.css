@@ -1692,7 +1692,14 @@ input[type=radio]:checked + label:after {
 
 .linkNewNews {
   text-decoration: none;
+  margin-right: 20px;
 }
+
+.linkNewNews:last-child{
+  margin-right: 0;
+}
+
+
 
 .containerNews {
   display: flex;
@@ -2605,6 +2612,10 @@ input[type=radio]:checked + label:after {
   }
   .docsItem:last-child{
     margin-right: 10px;
+  }
+  .linkNewNews{
+    margin-right: 0;
+    margin-left: 0;
   }
 }
 

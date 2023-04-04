@@ -182,6 +182,18 @@ $(".docsTitleOver").text(function(i, text) {
   $('#nav-icon6').toggleClass("open");
 });
 
+$(document).ready(function() {
+  var text = $(".textNews").html(); 
+  var urlRegex = /(https?:\/\/[^\s]+)/g;
+  var newText = text.replace(urlRegex, '<a href="$1" target="_blank">$1</a>'); 
+  $(".textNews").html(newText); 
+  
+  $(".textNews a").each(function() {
+    var urlName = $(this).attr("href");
+    $(this).text(urlName.split(';')[1]);
+  });
+});
+
 
 $('.docsClose').on('click', function () {
   $('.modalDocs').removeClass("active");
