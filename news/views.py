@@ -5,7 +5,7 @@ from news.models import *
 # Create your views here.
 def news(request):
     title = 'Новости'
-    posts = Post.objects.all()
+    posts = Post.objects.filter().order_by('-date')
     return render(request, 'news/news.html', {'posts': posts, 'title': title})
 
 
