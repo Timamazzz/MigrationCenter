@@ -493,6 +493,7 @@ p {
   display: flex;
   flex-direction: row;
   align-items: center;
+  justify-content: center;
 }
 
 .notSliderNewsImage {
@@ -1257,6 +1258,12 @@ input[type=radio]:checked + label:after {
   width: 95%;
   object-fit: cover;
   height: 190px;
+}
+
+.notSlider__introNews__img {
+  width: 95%;
+  object-fit: cover;
+  height: 300px;
 }
 
 @media (max-width: 825px) {
