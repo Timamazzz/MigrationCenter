@@ -70,3 +70,117 @@ NameError: name 'TypeError' is not defined
 [Fri Mar 10 01:07:27.273817 2023] [wsgi:error] [pid 49941]   warnings.warn(f"No directory at: {root}")
 [Fri Mar 10 01:07:54.021676 2023] [wsgi:error] [pid 49940] /home/timama/MigrationCenter/venv/lib/python3.8/site-packages/whitenoise/base.py:109: UserWarning: No directory at: /static/
 [Fri Mar 10 01:07:54.021768 2023] [wsgi:error] [pid 49940]   warnings.warn(f"No directory at: {root}")
+Exception ignored in: <function Local.__del__ at 0x7f835f600f70>
+Traceback (most recent call last):
+  File "/home/timama/MigrationCenter/venv/lib/python3.8/site-packages/asgiref/local.py", line 94, in __del__
+NameError: name 'TypeError' is not defined
+Exception ignored in: <function Local.__del__ at 0x7f835f600f70>
+Traceback (most recent call last):
+  File "/home/timama/MigrationCenter/venv/lib/python3.8/site-packages/asgiref/local.py", line 94, in __del__
+NameError: name 'TypeError' is not defined
+Exception ignored in: <function Local.__del__ at 0x7f835f5fff70>
+Traceback (most recent call last):
+  File "/home/timama/MigrationCenter/venv/lib/python3.8/site-packages/asgiref/local.py", line 94, in __del__
+NameError: name 'TypeError' is not defined
+Exception ignored in: <function Local.__del__ at 0x7f835f5fff70>
+Traceback (most recent call last):
+  File "/home/timama/MigrationCenter/venv/lib/python3.8/site-packages/asgiref/local.py", line 94, in __del__
+NameError: name 'TypeError' is not defined
+Exception ignored in: <function Local.__del__ at 0x7fed1c68df70>
+Traceback (most recent call last):
+  File "/home/timama/MigrationCenter/venv/lib/python3.8/site-packages/asgiref/local.py", line 94, in __del__
+NameError: name 'TypeError' is not defined
+Exception ignored in: <function Local.__del__ at 0x7fed1c68df70>
+Traceback (most recent call last):
+  File "/home/timama/MigrationCenter/venv/lib/python3.8/site-packages/asgiref/local.py", line 94, in __del__
+NameError: name 'TypeError' is not defined
+Exception ignored in: <function Local.__del__ at 0x7fed1c68df70>
+Traceback (most recent call last):
+  File "/home/timama/MigrationCenter/venv/lib/python3.8/site-packages/asgiref/local.py", line 94, in __del__
+NameError: name 'TypeError' is not defined
+Exception ignored in: <function Local.__del__ at 0x7fed1c68df70>
+Traceback (most recent call last):
+  File "/home/timama/MigrationCenter/venv/lib/python3.8/site-packages/asgiref/local.py", line 94, in __del__
+NameError: name 'TypeError' is not defined
+Exception ignored in: <function Local.__del__ at 0x7fed1c758f70>
+Traceback (most recent call last):
+  File "/home/timama/MigrationCenter/venv/lib/python3.8/site-packages/asgiref/local.py", line 94, in __del__
+NameError: name 'TypeError' is not defined
+Exception ignored in: <function Local.__del__ at 0x7fed1c758f70>
+Traceback (most recent call last):
+  File "/home/timama/MigrationCenter/venv/lib/python3.8/site-packages/asgiref/local.py", line 94, in __del__
+NameError: name 'TypeError' is not defined
+Exception ignored in: <function Local.__del__ at 0x7fed1c759f70>
+Traceback (most recent call last):
+  File "/home/timama/MigrationCenter/venv/lib/python3.8/site-packages/asgiref/local.py", line 94, in __del__
+NameError: name 'TypeError' is not defined
+Exception ignored in: <function Local.__del__ at 0x7fed1c759f70>
+Traceback (most recent call last):
+  File "/home/timama/MigrationCenter/venv/lib/python3.8/site-packages/asgiref/local.py", line 94, in __del__
+NameError: name 'TypeError' is not defined
+Exception ignored in: <function Local.__del__ at 0x7fed167b9f70>
+Traceback (most recent call last):
+  File "/home/timama/MigrationCenter/venv/lib/python3.8/site-packages/asgiref/local.py", line 94, in __del__
+NameError: name 'TypeError' is not defined
+Exception ignored in: <function Local.__del__ at 0x7fed1c758f70>
+Traceback (most recent call last):
+  File "/home/timama/MigrationCenter/venv/lib/python3.8/site-packages/asgiref/local.py", line 94, in __del__
+NameError: name 'TypeError' is not defined
+Exception ignored in: <function Local.__del__ at 0x7fed1c758f70>
+Traceback (most recent call last):
+  File "/home/timama/MigrationCenter/venv/lib/python3.8/site-packages/asgiref/local.py", line 94, in __del__
+NameError: name 'TypeError' is not defined
+Exception ignored in: <function Local.__del__ at 0x7fed1c758f70>
+Traceback (most recent call last):
+  File "/home/timama/MigrationCenter/venv/lib/python3.8/site-packages/asgiref/local.py", line 94, in __del__
+NameError: name 'TypeError' is not defined
+Exception ignored in: <function Local.__del__ at 0x7fed1c758f70>
+Traceback (most recent call last):
+  File "/home/timama/MigrationCenter/venv/lib/python3.8/site-packages/asgiref/local.py", line 94, in __del__
+NameError: name 'TypeError' is not defined
+Exception ignored in: <function Local.__del__ at 0x7fed16994c10>
+Traceback (most recent call last):
+  File "/home/timama/MigrationCenter/venv/lib/python3.8/site-packages/asgiref/local.py", line 94, in __del__
+NameError: name 'TypeError' is not defined
+[Thu Apr 06 14:03:38.726588 2023] [core:error] [pid 35625] [client 80.66.77.236:43714] AH00126: Invalid URI in request GET /../../mnt/mtd/Config/Account1 HTTP/1.1
+Exception ignored in: <function Local.__del__ at 0x7fed1c758f70>
+Traceback (most recent call last):
+  File "/home/timama/MigrationCenter/venv/lib/python3.8/site-packages/asgiref/local.py", line 94, in __del__
+NameError: name 'TypeError' is not defined
+Exception ignored in: <function Local.__del__ at 0x7fed1c758f70>
+Traceback (most recent call last):
+  File "/home/timama/MigrationCenter/venv/lib/python3.8/site-packages/asgiref/local.py", line 94, in __del__
+NameError: name 'TypeError' is not defined
+Exception ignored in: <function Local.__del__ at 0x7fed1c758f70>
+Traceback (most recent call last):
+  File "/home/timama/MigrationCenter/venv/lib/python3.8/site-packages/asgiref/local.py", line 94, in __del__
+NameError: name 'TypeError' is not defined
+Exception ignored in: <function Local.__del__ at 0x7fed1c758f70>
+Traceback (most recent call last):
+  File "/home/timama/MigrationCenter/venv/lib/python3.8/site-packages/asgiref/local.py", line 94, in __del__
+NameError: name 'TypeError' is not defined
+Exception ignored in: <function Local.__del__ at 0x7fed1688fa60>
+Traceback (most recent call last):
+  File "/home/timama/MigrationCenter/venv/lib/python3.8/site-packages/asgiref/local.py", line 94, in __del__
+NameError: name 'TypeError' is not defined
+[Fri Apr 07 03:17:48.846623 2023] [core:error] [pid 48962] [client 185.180.143.72:41954] AH00126: Invalid URI in request HEAD /icons/.%2e/%2e%2e/apache2/icons/sphere1.png HTTP/1.1
+Exception ignored in: <function Local.__del__ at 0x7fed1c759f70>
+Traceback (most recent call last):
+  File "/home/timama/MigrationCenter/venv/lib/python3.8/site-packages/asgiref/local.py", line 94, in __del__
+NameError: name 'TypeError' is not defined
+Exception ignored in: <function Local.__del__ at 0x7fed1c759f70>
+Traceback (most recent call last):
+  File "/home/timama/MigrationCenter/venv/lib/python3.8/site-packages/asgiref/local.py", line 94, in __del__
+NameError: name 'TypeError' is not defined
+Exception ignored in: <function Local.__del__ at 0x7fed1c758f70>
+Traceback (most recent call last):
+  File "/home/timama/MigrationCenter/venv/lib/python3.8/site-packages/asgiref/local.py", line 94, in __del__
+NameError: name 'TypeError' is not defined
+Exception ignored in: <function Local.__del__ at 0x7fed1c758f70>
+Traceback (most recent call last):
+  File "/home/timama/MigrationCenter/venv/lib/python3.8/site-packages/asgiref/local.py", line 94, in __del__
+NameError: name 'TypeError' is not defined
+Exception ignored in: <function Local.__del__ at 0x7fed167a7a60>
+Traceback (most recent call last):
+  File "/home/timama/MigrationCenter/venv/lib/python3.8/site-packages/asgiref/local.py", line 94, in __del__
+NameError: name 'TypeError' is not defined
