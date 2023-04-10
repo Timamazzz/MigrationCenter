@@ -18,7 +18,7 @@
     <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
     <link rel="stylesheet" href="{% static "css/main.css" %}">
 
-    <link rel="icon" href="{% static 'images/LOGO.svg' %}" type="image/x-icon">
+    <!--<link rel="icon" href="{% static 'images/LOGO.svg' %}" type="image/x-icon">-->
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://kit.fontawesome.com/6d0367a1ce.js" crossorigin="anonymous"></script>
@@ -27,11 +27,11 @@
 
 <body>
     <div id="bg" class="bg__preloader"></div>
-    <div id="preloader">
+    <!--<div id="preloader">
         <div class="pre_wrapper">
             <img loading="lazy" src="{% static "images/LOGO.svg" %}">
         </div>
-    </div>
+    </div>-->
 
     <script>
         $(window).on('load', function () {
@@ -44,9 +44,9 @@
 
     <header class="header">
         <div class="headerContainer">
-            <a href="{% url 'main' %}" class="logo">
+            <!--<a href="{% url 'main' %}" class="logo">
                 <img src="{% static "images/LOGO.svg" %}" class="logoIcon">
-            </a>
+            </a>-->
 
             <h1 class="headerTitle">Центр помощи, поддержки,<br/>
                 социальной и трудовой адаптации</h1>
@@ -64,8 +64,7 @@
                 <div class="userInfo">
                   <div style="display: flex; justify-content: space-between; align-items: center; width: 100%;">
                     <img class="userIcon" src="{% static "images/user.svg" %}">
-                    <p class="userName">Иван Иванов</p>
-                    <img src="{% static "images/dots.svg" %}" class="dots">
+                    <p class="userName">Вход</p>
                   </div>
                 </div>
                 <div class="userInfoModal">
@@ -83,14 +82,15 @@
                     </div>
               </div>
                 <div class="navLoggin">
-                    <a href="#">вход</a>
                     <a href="{% url 'feedback' %}">помощь ?</a>
                 </div>
             </div>
         </div>
 
-        <div id="nav-icon6" class="openNav">
-            <span></span>
+        <div id="navFooter-mb" class="navFooter-mb">
+            <div id="nav-icon6" class="openNav">
+                <span></span>
+            </div>
         </div>
     </header>
 
@@ -187,9 +187,9 @@
     <footer class="footer">
         <div class="container">
           <div class="footerContainer">
-            <div class="logo">
+            <!--<div class="logo">
                 <img src="{% static "images/logoF.svg" %}" class="logoIcon">
-            </div>
+            </div>-->
             <nav class="navFooter">
                 <a href="{% url 'main' %}" class="footerLinkItem">ГЛАВНАЯ</a>
                 <a href="{% url 'services' %}" class="footerLinkItem">уСЛУГИ</a>
