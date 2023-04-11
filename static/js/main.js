@@ -59,7 +59,6 @@ $('.docsOpen').on('click', function (e) {
         type:'POST',
         data: {id: doc_id},
         success:function(response){
-            console.log(response);
             /*console.log(window.location.pathname);*/
             openModal(response);
         },
@@ -69,6 +68,9 @@ $('.docsOpen').on('click', function (e) {
     });
 
 });
+
+
+
 
 $('.docsOpenModal').on('click', function (e) {
   e.preventDefault();
@@ -106,7 +108,6 @@ $.ajax({
       type:'POST',
       data: {id: doc_id},
       success:function(response){
-          console.log(response);
           openImageModal(response);
       },
       error:function(){
@@ -198,7 +199,6 @@ $(document).ready(function() {
     }
 
       newText = newText.replace(item, '<a href="'+link+'">'+ name +'</a>');
-      console.log(newText)
     }
   )
   $(".textNews").html(newText); 

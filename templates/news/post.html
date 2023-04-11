@@ -9,9 +9,7 @@
         {% if gallery.count <= 3 %}
             <div class="notSliderNewsImageContainer">
                 {% for img in gallery %}
-                    <div class="notSliderNewsImageContainer">
                         <img loading="lazy" class="notSlider__introNews__img" src="{{ img.image.url }}">
-                    </div>
                 {% endfor %}
             </div>
         {% else %}
