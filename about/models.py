@@ -25,11 +25,13 @@ def get_news_gallery_path(instance, filename):
 class Document(models.Model):
     Regulation = 'Regulation'
     Other = 'Other'
+    Reporting = 'Reporting'
     types = (
         (Regulation,
          'Уставные документы Автономной Некоммерческой организации «Центр помощи, поддержки, социальной и трудовой '
          'адаптации»'),
-        (Other, 'Прочие ДОКУМЕНТЫ')
+        (Other, 'Прочие ДОКУМЕНТЫ'),
+        (Reporting, 'Отчетность')
     )
     name = models.CharField(max_length=256)
     type = models.CharField(max_length=256, choices=types)

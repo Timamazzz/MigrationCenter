@@ -35,6 +35,7 @@ def area_of_activities(request):
 def docs(request):
     regular_docs = Document.objects.filter(type='Regulation')
     other_docs = Document.objects.filter(type='Other')
+    report_docs = Document.objects.filter(type='Reporting')
     title = 'Документы'
 
     if request.method == 'POST':
@@ -44,7 +45,8 @@ def docs(request):
         images = serializers.serialize('json', images)
         return JsonResponse({'name': name, 'images': images})
     else:
-        return render(request, 'about/docs.html', {'regular': regular_docs, 'other': other_docs, 'title': title})
+        return render(request, 'about/docs.html', {'regular': regular_docs, 'other': other_docs,
+                                                   'reports': report_docs, 'title': title})
 
 
 def vacancies(request):
