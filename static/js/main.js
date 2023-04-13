@@ -162,7 +162,6 @@ $(".docsTitleOver").text(function(i, text) {
  }
  function openImageModal(docs_data){
          let images = JSON.parse(docs_data.images)
-         let block;
          images.map((item, index)=>{
              let url = 'http://cppsta.ru/media/' + item.fields.image
               $('.section__introModal').append(

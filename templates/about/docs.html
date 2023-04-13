@@ -45,6 +45,25 @@
                 </div>
             {% endfor %}
         </div>
+
+        <h1 class="newsTitle">Отчетность</h1>
+        <div class="containerDocs">
+            {% for doc in reports %}
+                {% csrf_token %}
+                <div class="docsItem docsOpenModal" id="{{ doc.id }}">
+                    {% if doc.name|length > 22 %}
+                        <h4 class="docsTitleOver">{{ doc.name }}</h4>
+                    {% else %}
+                        <h4 class="docsTitle">{{ doc.name }}</h4>
+                    {% endif %}
+                    <div class="containerImgDocs">
+                       <a class="linkDocks">
+                        <img class="imgDocs" src="{{ doc.previewImage.url }}">
+                       </a>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
     </div>
 </section>
 {% endblock %}
