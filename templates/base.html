@@ -7,6 +7,17 @@
 
     <title>{% block title %}{%  endblock %}</title>
 
+    <style>
+        nc-widget {
+            position: fixed;
+            bottom: 0;
+            right: 0;
+            z-index: 9999;
+            width: auto;
+            height: auto;
+        }
+
+    </style>
     <meta name="theme-color" content="#fff">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
@@ -19,6 +30,7 @@
     <link rel="stylesheet" href="{% static "css/main.css" %}">
 
     <link rel="icon" href="{% static 'images/LOGO.svg' %}" type="image/x-icon">
+    <link href="https://nc.promo-bot.ru/dist/css/nc-widget.css" rel="stylesheet">
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://kit.fontawesome.com/6d0367a1ce.js" crossorigin="anonymous"></script>
@@ -189,6 +201,8 @@
 
     {% block content %}{% endblock %}
 
+    <nc-widget></nc-widget>
+
     <footer class="footer">
         <div class="container">
           <div class="footerContainer">
@@ -226,6 +240,8 @@
 
 
 
+
+    <script src="https://nc.promo-bot.ru/dist/js/nc-widget.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" type="text/javascript"></script>
     <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/Shuffle/5.2.3/shuffle.min.js"></script>
 
