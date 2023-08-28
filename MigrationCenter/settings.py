@@ -22,7 +22,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-g5y#kihgk5y2212g#-tqb=%qa$z3g)c#fhhns$c(vw_3==@of='
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['89.108.98.220', 'cppsta.ru', 'www.cppsta.ru', 'localhost', '127.0.0.1']
 
@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'about',
     'services',
     'contacts',
+    'feedback',
     'django_cleanup.apps.CleanupConfig',
 ]
 
@@ -136,3 +137,10 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.yandex.ru'
+EMAIL_PORT = 465
+EMAIL_USE_SSL = True
+EMAIL_HOST_USER = 'anocsta@yandex.ru'
+EMAIL_HOST_PASSWORD = 'password'

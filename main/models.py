@@ -11,7 +11,6 @@ def get_news_banner_path(instance, filename):
     else:
         return os.path.join('images/banner', str(instance.pk), filename)
 
-
 # Create your models here.
 class Information(models.Model):
     header = models.CharField(max_length=256)

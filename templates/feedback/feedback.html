@@ -6,19 +6,24 @@
     <div class="container">
         <h2 class="newsTitle">Обратная связь</h2>
 
-        <form class="feedbackForm">
-            <input type="text" placeholder="Напишите ваше имя" class="feedbackInput smallInput">
-            <input type="email" placeholder="напишите ваш е-мейл" class="feedbackInput smallInput">
-
-            <textarea type="text" placeholder="Напишите ваше сообщение" class="feedbackInput textArea"></textarea>
+        <form method="POST" class="feedbackForm">
+            {% csrf_token %}
+            <div class="form-group">
+                <input type="text" name="{{ form.subject.name }}" placeholder="Напишите ваше имя" class="feedbackInput smallInput form-control">
+            </div>
+            <div class="form-group">
+                <input type="email" name="{{ form.email.name }}" placeholder="напишите ваш е-мейл" class="feedbackInput smallInput form-control">
+            </div>
+            <div class="form-group">
+                <textarea name="{{ form.content.name }}" placeholder="Напишите ваше сообщение" class="feedbackInput textArea form-control"></textarea>
+            </div>
+            <div class="formFooterFeedback">
+                <input type="checkbox" class="feedbackCheck">
+                <label class="feedbackLabel">я не робот</label>
+                <button type="submit" class="btn">отправить <img src="{% static "/img/../../static/images/arrow.svg" %}"></button>
+            </div>
         </form>
 
-        <div class="formFooterFeedback">
-            <input type="checkbox" class="feedbackCheck">
-            <label class="feedbackLabel">я не робот</label>
-
-            <button type="submit" class="btn">отправить <img src="{% static "/img/../../static/images/arrow.svg" %}"></button>
-        </div>
     </div>
 </section>
 {% endblock %}
