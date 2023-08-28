@@ -5,16 +5,19 @@
 <section class="section">
     <div class="container">
         <div class="aboutUscontainer">
+        {% if questions.count > 0 %}
             {% for question in questions %}
                 <div>
                     <h3 class="insuranceTitle">{{ question.header }}</h3>
                     <p class="textNews">{{ question.text }}</p>
                 </div>
             {% endfor %}
-{% comment %}            <div class="noVacans">
+        {% else %}
+            <div class="noVacans">
                 <img class="noVakImg" src="{% static "images/logoGray.svg" %}">
                 <p class="noVakText">Раздел в разработке</p>
-            </div>{% endcomment %}
+            </div>
+        {% endif %}
         </div>
     </div>
 </section>
