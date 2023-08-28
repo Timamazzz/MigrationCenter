@@ -183,7 +183,7 @@ $(".docsTitleOver").text(function(i, text) {
 });
 
 $(document).ready(function() {
-  var text = $(".textNews").html(); 
+  var text = $(".textNews").html();
   var reg = /{(.+?)}/g;
   
   var links = text.match(reg);
@@ -204,6 +204,31 @@ $(document).ready(function() {
   
 
 });
+
+$(document).ready(function() {
+  $(".insuItemText").each(function() {
+    var text = $(this).html();
+    var reg = /{(.+?)}/g;
+
+    var phoneRegex = /^\+?[0-9()-.\s]+$/;
+    var links = text.match(reg);
+    var newText = text;
+
+    links.map( (item) => {
+      var link = item.split(';')[0].slice(1); // Убрать второй аргумент (-1)
+      var name = link;
+
+      if (phoneRegex.test(link)) {
+        newText = newText.replace(item, '<a href="tel:'+link+'">'+ name +'</a>');
+      } else {
+        newText = newText.replace(item, '<a href="'+link+'">'+ name +'</a>');
+      }
+    })
+
+    $(this).html(newText);
+  });
+});
+
 
 
 $('.docsClose').on('click', function () {

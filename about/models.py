@@ -38,6 +38,13 @@ class Document(models.Model):
     previewImage = models.ImageField(upload_to=get_docs_preview_path,
                                      default='images/docs/default_doc.png', blank=True)
 
+    class Meta:
+        verbose_name = 'Документ'
+        verbose_name_plural = 'Документы'
+
+    def __str__(self):
+        return self.name
+
 
 class DocImage(models.Model):
     image = models.ImageField(upload_to=get_news_gallery_path)
@@ -50,12 +57,26 @@ class AdditionalActivity(models.Model):
     previewImage = models.ImageField(upload_to='images/AdditionalActivity/',
                                      default='images/docs/default_doc.png', blank=True)
 
+    class Meta:
+        verbose_name = 'Дополнительная цель деятельности'
+        verbose_name_plural = 'Дополнительные цели деятельности'
+
+    def __str__(self):
+        return self.name
+
 
 class AreaOfActivity(models.Model):
     name = models.CharField(max_length=256)
     text = models.TextField()
     previewImage = models.ImageField(upload_to='images/AreaOfActivity/',
                                      default='images/docs/default_doc.png', blank=True)
+
+    class Meta:
+        verbose_name = 'Направление деятельности'
+        verbose_name_plural = 'Направления деятельности'
+
+    def __str__(self):
+        return self.name
 
 
 class Vacancy(models.Model):
@@ -67,3 +88,10 @@ class Vacancy(models.Model):
     conditions = models.TextField()
     wages = models.FloatField()
     is_active = models.BooleanField(default=True)
+
+    class Meta:
+        verbose_name = 'Вакансия'
+        verbose_name_plural = 'Вакансии'
+
+    def __str__(self):
+        return self.name

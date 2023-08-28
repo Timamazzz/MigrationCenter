@@ -1,5 +1,5 @@
 from django.shortcuts import render
-
+from .models import *
 
 # Create your views here.
 def services(request):
@@ -9,7 +9,8 @@ def services(request):
 
 def insurance(request):
     title = 'Страхование'
-    return render(request, 'services/insurance.html', {'title': title})
+    services = InsuranceService.objects.all()
+    return render(request, 'services/insurance.html', {'title': title, 'services': services})
 
 
 def testing(request):

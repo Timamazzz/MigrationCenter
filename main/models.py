@@ -18,10 +18,24 @@ class Information(models.Model):
     text = models.TextField()
     date = models.DateField(default=datetime.date.today())
 
+    class Meta:
+        verbose_name = 'Информация'
+        verbose_name_plural = 'Информация'
+
+    def __str__(self):
+        return self.header
+
 
 class FrequentQuestions(models.Model):
     header = models.CharField(max_length=256)
     text = models.TextField()
+
+    class Meta:
+        verbose_name = 'Частый вопрос'
+        verbose_name_plural = 'Частые вопросы'
+
+    def __str__(self):
+        return self.header
 
 
 class MainBanner(models.Model):
@@ -31,3 +45,10 @@ class MainBanner(models.Model):
     link = models.CharField(max_length=2048, blank=True, null=True)
     date = models.DateField(default=datetime.date.today())
     is_active = models.BooleanField(default=True)
+
+    class Meta:
+        verbose_name = 'Инфорация на главном баннере'
+        verbose_name_plural = 'Инфорация на главном баннере'
+
+    def __str__(self):
+        return str(self.date)

@@ -26,6 +26,13 @@ class Post(models.Model):
     date = models.DateField(default=datetime.date.today())
     previewImage = models.ImageField(upload_to=get_news_preview_path)
 
+    class Meta:
+        verbose_name = 'Пост'
+        verbose_name_plural = 'Посты'
+
+    def __str__(self):
+        return str(self.date)
+
 
 class PostImage(models.Model):
     image = models.ImageField(upload_to=get_news_gallery_path)
