@@ -5,16 +5,16 @@
 <section class="section">
     <div class="container">
         <div class="aboutUscontainer">
-            {% comment %}{% for question in questions %}
+            {% for question in questions %}
                 <div>
                     <h3 class="insuranceTitle">{{ question.header }}</h3>
                     <p class="textNews">{{ question.text }}</p>
                 </div>
-            {% endfor %}{% endcomment %}
-            <div class="noVacans">
+            {% endfor %}
+{% comment %}            <div class="noVacans">
                 <img class="noVakImg" src="{% static "images/logoGray.svg" %}">
                 <p class="noVakText">Раздел в разработке</p>
-            </div>
+            </div>{% endcomment %}
         </div>
     </div>
 </section>
