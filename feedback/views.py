@@ -13,5 +13,5 @@ class FeedbackCreateView(CreateView):
     def form_valid(self, form):
         feedback = form.save(commit=False)
         feedback.ip_address = get_client_ip(self.request)
-        send_contact_email_message(feedback.subject, feedback.email, feedback.content)
+        #send_contact_email_message(feedback.subject, feedback.email, feedback.content)
         return super().form_valid(form)

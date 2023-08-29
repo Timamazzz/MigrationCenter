@@ -139,8 +139,8 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
-EMAIL_HOST = 'smtp.yandex.ru'  # Используйте адрес SMTP-сервера вашего почтового провайдера
-EMAIL_PORT = 587  # Порт SMTP-сервера (587 для TLS)
-EMAIL_USE_TLS = True  # Использовать TLS (True или False)
+EMAIL_HOST = 'smtp.yandex.ru'
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
 EMAIL_HOST_USER = 'anocsta@yandex.ru'
 EMAIL_HOST_PASSWORD = '153118ta'
