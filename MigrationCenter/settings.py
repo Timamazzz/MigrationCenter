@@ -22,7 +22,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-g5y#kihgk5y2212g#-tqb=%qa$z3g)c#fhhns$c(vw_3==@of='
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['89.108.98.220', 'cppsta.ru', 'www.cppsta.ru', 'localhost', '127.0.0.1']
 
@@ -139,8 +139,8 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
-EMAIL_HOST = 'smtp.yandex.ru'
-EMAIL_PORT = 465
-EMAIL_USE_SSL = True
+EMAIL_HOST = 'smtp.yandex.ru'  # Используйте адрес SMTP-сервера вашего почтового провайдера
+EMAIL_PORT = 587  # Порт SMTP-сервера (587 для TLS)
+EMAIL_USE_TLS = True  # Использовать TLS (True или False)
 EMAIL_HOST_USER = 'anocsta@yandex.ru'
 EMAIL_HOST_PASSWORD = '153118ta'
